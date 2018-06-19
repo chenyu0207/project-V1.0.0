@@ -113,7 +113,7 @@ function check_dirfile(){
  */
 function check_func(){
 	$items = array(
-		array('mysqli_connect',     '支持', 'success'),
+		array('mysql_connect',     '支持', 'success'),
 		array('file_get_contents', '支持', 'success'),
 		array('fsockopen',         '支持', 'success'),
 		//array('mime_content_type', '支持', 'success'), //该函数非必须
