@@ -1,47 +1,143 @@
-[ 2018-06-19T15:24:47+08:00 ] ::1 /index.php?s=/install/step2.html
-ERR: Access denied for user 'root'@'172.18.0.1' (using password: YES)
-
-[ 2018-06-19T15:26:00+08:00 ] ::1 /index.php?s=/install/step2.html
-ERR: Access denied for user 'root'@'localhost' (using password: NO)
-
-[ 2018-06-19T15:27:30+08:00 ] ::1 /index.php?s=/admin/public/login.html
+[ 2018-06-19T15:59:33+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
 INFO: [ app_begin ] --START--
-INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000036s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.000281s ]
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000189s ]
 INFO: [ action_begin ] --START--
-INFO: [ action_begin ] --END-- [ RunTime:0.000017s ]
-SQL: SHOW COLUMNS FROM `pro_ucenter_member` [ RunTime:0.001630s ]
-SQL: SELECT * FROM `pro_ucenter_member` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000696s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000007s ]
+NOTIC: [2] mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) /home/wwwroot/project-V1.0.0/www/ThinkPHP/Library/Think/Db/Driver/Mysqli.class.php 第 44 行.
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
 
-[ 2018-06-19T15:27:39+08:00 ] ::1 /index.php?s=/admin/public/login.html
+[ 2018-06-19T15:59:39+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
 INFO: [ app_begin ] --START--
-INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000039s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000177s ]
 INFO: [ action_begin ] --START--
-INFO: [ action_begin ] --END-- [ RunTime:0.000020s ]
-SQL: SHOW COLUMNS FROM `pro_ucenter_member` [ RunTime:0.007215s ]
-SQL: SELECT * FROM `pro_ucenter_member` WHERE ( `username` = 'root' ) LIMIT 1   [ RunTime:0.000707s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000008s ]
 
-[ 2018-06-19T15:27:45+08:00 ] ::1 /index.php?s=/admin/public/login.html
+[ 2018-06-19T15:59:55+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
 INFO: [ app_begin ] --START--
-INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000040s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.000297s ]
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000190s ]
 INFO: [ action_begin ] --START--
-INFO: [ action_begin ] --END-- [ RunTime:0.000020s ]
-SQL: SHOW COLUMNS FROM `pro_ucenter_member` [ RunTime:0.007565s ]
-SQL: SELECT * FROM `pro_ucenter_member` WHERE ( `username` = 'root' ) LIMIT 1   [ RunTime:0.000194s ]
-SQL: UPDATE `pro_ucenter_member` SET `last_login_time`=1529393265,`last_login_ip`=0 WHERE ( `id` = 1 ) [ RunTime:0.004939s ]
-SQL: SHOW COLUMNS FROM `pro_member` [ RunTime:0.002095s ]
-SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `pro_member` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000948s ]
-SQL: SHOW COLUMNS FROM `pro_action` [ RunTime:0.001990s ]
-SQL: SELECT * FROM `pro_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.001045s ]
-SQL: SHOW COLUMNS FROM `pro_action_log` [ RunTime:0.001912s ]
-SQL: INSERT INTO `pro_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (1,1,0,'member',1,1529393265,'操作url：/index.php?s=/admin/public/login.html') [ RunTime:0.000736s ]
-SQL: SELECT * FROM `pro_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.000126s ]
-NOTIC: [8] Undefined offset: 1 /Users/chenyu/git/project-V1.0.0/www/Application/Common/Common/function.php 第 605 行.
-NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given /Users/chenyu/git/project-V1.0.0/www/Application/Common/Common/function.php 第 605 行.
-SQL: SELECT COUNT(*) AS tp_count FROM `pro_action_log` WHERE ( `action_id` = 1 ) AND ( `user_id` = 1 ) AND ( `create_time` > 1529306865 ) LIMIT 1   [ RunTime:0.000270s ]
-SQL: SHOW COLUMNS FROM `pro_member` [ RunTime:0.001708s ]
-SQL: UPDATE `pro_member` SET `score`=score+10 WHERE ( uid=1 AND status>-1 ) [ RunTime:0.001958s ]
-SQL: UPDATE `pro_member` SET `login`=`login`+1,`last_login_time`=1529393265,`last_login_ip`=0 WHERE ( `uid` = 1 ) [ RunTime:0.000373s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000007s ]
+NOTIC: [2] mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) /home/wwwroot/project-V1.0.0/www/ThinkPHP/Library/Think/Db/Driver/Mysqli.class.php 第 44 行.
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2018-06-19T16:00:25+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000199s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000008s ]
+
+[ 2018-06-19T16:00:32+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000190s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000009s ]
+NOTIC: [2] mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) /home/wwwroot/project-V1.0.0/www/ThinkPHP/Library/Think/Db/Driver/Mysqli.class.php 第 44 行.
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2018-06-19T16:00:33+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000208s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000007s ]
+
+[ 2018-06-19T16:00:34+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000199s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000010s ]
+
+[ 2018-06-19T16:00:34+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000176s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000008s ]
+
+[ 2018-06-19T16:00:34+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000209s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000008s ]
+
+[ 2018-06-19T16:00:34+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000239s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000007s ]
+
+[ 2018-06-19T16:00:34+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000177s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000007s ]
+
+[ 2018-06-19T16:00:35+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000181s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000015s ]
+
+[ 2018-06-19T16:00:41+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000233s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000010s ]
+NOTIC: [2] mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) /home/wwwroot/project-V1.0.0/www/ThinkPHP/Library/Think/Db/Driver/Mysqli.class.php 第 44 行.
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2018-06-19T16:02:46+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000194s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000007s ]
+
+[ 2018-06-19T16:02:55+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000191s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000007s ]
+NOTIC: [2] mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) /home/wwwroot/project-V1.0.0/www/ThinkPHP/Library/Think/Db/Driver/Mysqli.class.php 第 44 行.
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2018-06-19T16:04:28+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000205s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000008s ]
+
+[ 2018-06-19T16:04:50+08:00 ] 222.128.178.57 /index.php?s=/admin/public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Think\Behavior\ReadHtmlCache [ RunTime:0.000011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000214s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000009s ]
+SQL: SHOW COLUMNS FROM `pro_ucenter_member` [ RunTime:0.000596s ]
+SQL: SELECT * FROM `pro_ucenter_member` WHERE ( `username` = 'root' ) LIMIT 1   [ RunTime:0.000168s ]
+SQL: UPDATE `pro_ucenter_member` SET `last_login_time`=1529395490,`last_login_ip`='3732976185' WHERE ( `id` = 1 ) [ RunTime:0.000187s ]
+SQL: SHOW COLUMNS FROM `pro_member` [ RunTime:0.000398s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `pro_member` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000155s ]
+SQL: SHOW COLUMNS FROM `pro_action` [ RunTime:0.000362s ]
+SQL: SELECT * FROM `pro_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.000150s ]
+SQL: SHOW COLUMNS FROM `pro_action_log` [ RunTime:0.000371s ]
+SQL: INSERT INTO `pro_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (1,1,3732976185,'member',1,1529395490,'操作url：/index.php?s=/admin/public/login.html') [ RunTime:0.000172s ]
+SQL: SELECT * FROM `pro_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.000125s ]
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/project-V1.0.0/www/Application/Common/Common/function.php 第 605 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given /home/wwwroot/project-V1.0.0/www/Application/Common/Common/function.php 第 605 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `pro_action_log` WHERE ( `action_id` = 1 ) AND ( `user_id` = 1 ) AND ( `create_time` > 1529309090 ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: UPDATE `pro_member` SET `login`=`login`+1,`last_login_time`=1529395490,`last_login_ip`='3732976185' WHERE ( `uid` = 1 ) [ RunTime:0.000152s ]
 
