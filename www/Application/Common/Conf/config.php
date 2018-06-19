@@ -15,11 +15,10 @@ return array(
     /* 模块相关配置 */
     'AUTOLOAD_NAMESPACE' => array('Addons' => ONETHINK_ADDON_PATH), //扩展模块列表
     'DEFAULT_MODULE'     => 'Home',
-    'MODULE_DENY_LIST'   => array('Common'),
-    //'MODULE_ALLOW_LIST'  => array('Home','Admin'),
+    'MODULE_DENY_LIST'   => array('Common', 'User'),
 
     /* 系统数据加密设置 */
-    'DATA_AUTH_KEY' => '', //默认数据加密KEY
+    'DATA_AUTH_KEY' => '2Bjm%Q_c6K|>J<`IkU/NwvCr&DFAM=8@E-h:3}9x', //默认数据加密KEY
 
     /* 调试配置 */
     'SHOW_PAGE_TRACE' => true,
@@ -38,14 +37,14 @@ return array(
     'DEFAULT_FILTER' => '', //全局过滤函数
 
     /* 数据库配置 */
-    'DB_TYPE'   => '', // 数据库类型
-    'DB_HOST'   => '', // 服务器地址
-    'DB_NAME'   => '', // 数据库名
-    'DB_USER'   => '', // 用户名
-    'DB_PWD'    => '',  // 密码
-    'DB_PORT'   => '', // 端口
-    'DB_PREFIX' => '', // 数据库表前缀
+    'DB_TYPE'   => 'mysqli', // 数据库类型
+    'DB_HOST'   => 'localhost', // 服务器地址
+    'DB_NAME'   => 'project', // 数据库名
+    'DB_USER'   => 'root', // 用户名
+    'DB_PWD'    => 'root',  // 密码
+    'DB_PORT'   => '3306', // 端口
+    'DB_PREFIX' => 'pro_', // 数据库表前缀
 
     /* 文档模型配置 (文档模型核心配置，请勿更改) */
-    'DOCUMENT_MODEL_TYPE' =>    array(2 => '主题', 1 => '目录', 3 => '段落'),
+    'DOCUMENT_MODEL_TYPE' => array(2 => '主题', 1 => '目录', 3 => '段落'),
 );
