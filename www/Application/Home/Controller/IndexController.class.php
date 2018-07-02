@@ -17,23 +17,13 @@ class IndexController extends HomeController {
 
 	//系统首页
     public function index(){
-    	if(IS_CLI){
-            $data = M('Content')->field("id,content")->select();
-            foreach ($data as $value) {
-                $value['content'] = ubb($value['content']);
-                M('Content')->save($value);
+            if (I()) {
+               $logistics_id = I('logistics_id');
+                $this->assign('logistics_id', $logistics_id);
+               $logistics_info = M('Logistics')->where('logistics_id = ' . $logistics_id)->order('id desc')->select();
+               $this->assign('_list', $logistics_info);
             }
-
-        } else {
-            $category = D('Category')->getTree();
-            $lists    = D('Document')->lists(null);
-
-            $this->assign('category',$category);//栏目
-            $this->assign('lists',$lists);//列表
-            $this->assign('page',D('Document')->page);//分页
-
             $this->display();
-        }
     }
 
     public function upload(){
