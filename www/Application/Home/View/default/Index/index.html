@@ -1,18 +1,5 @@
 <extend name="Base/common"/>
 
-<block name="header">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/bootstrap.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/main.css">
-    <title>物流查询系统</title>
-</block>
-
-<block name="side">
-<!-- 左侧 nav
-================================================== -->
-</block>
 
 <block name="body">
     <!-- 页头 -->
@@ -24,7 +11,7 @@
     <!-- 查询 -->
     <div class="input-group container" id="thisForm">
         <form id="form" action="{:U('index')}" method="post" class="form-horizontal doc-modal-form">
-            <input type="text" class="form-control" placeholder="请输入订单编号" id="" name = 'logistics_id' value="{$logistics_id}" required>
+            <input type="text" class="form-control" placeholder="请输入订单编号" id="searchArea" name = 'logistics_id' value="{$logistics_id}" required>
             <div class="invalid-feedback">
                 订单编号不能为空~
             </div>
@@ -35,7 +22,11 @@
     </div>
     <!-- 查询结果 -->
     <div class="container">
+        <if condition="$_list neq '' ">
         <table class="table"  id="textStatus">
+        <else/>
+            <table class="table" style="display: none" id="textStatus">
+       </if>
             <thead>
             <tr>
                 <th class="w-35p">时间</th>
@@ -84,9 +75,6 @@
         </table>
     </div>
 
-    <script src="__PUBLIC__/Home/js/libs/jquery.min.js"></script>
-    <script src="__PUBLIC__/Home/js/libs/bootstrap.min.js"></script>
-    <script src="__PUBLIC__/Home/js/main.js"></script>
 </block>
 <block name="script">
 

@@ -1,21 +1,15 @@
 <meta charset="UTF-8">
-<title>{:C('WEB_SITE_TITLE')}</title>
-<link href="__STATIC__/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="__STATIC__/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 <link href="__STATIC__/bootstrap/css/docs.css" rel="stylesheet">
 <link href="__STATIC__/bootstrap/css/onethink.css" rel="stylesheet">
-
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-<script src="__STATIC__/bootstrap/js/html5shiv.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/bootstrap.min.css">
+<link rel="stylesheet" href="__PUBLIC__/Home/css/main.css">
+<title>物流查询系统</title>
 <![endif]-->
-<block name="style"></block>
-<!--[if lt IE 9]>
-<script type="text/javascript" src="__STATIC__/jquery-1.10.2.min.js"></script>
-<![endif]-->
-<!--[if gte IE 9]><!-->
-<script type="text/javascript" src="__STATIC__/jquery-2.0.3.min.js"></script>
-<script type="text/javascript" src="__STATIC__/bootstrap/js/bootstrap.min.js"></script>
-<!--<![endif]-->
-<!-- 页面header钩子，一般用于加载插件CSS文件和代码 -->
+<block name="style">
+<script src="__PUBLIC__/Home/js/libs/jquery.min.js"></script>
+<script src="__PUBLIC__/Home/js/libs/bootstrap.min.js"></script>
+<script src="__PUBLIC__/Home/js/main.js"></script>
+</block>
 {:hook('pageHeader')}
