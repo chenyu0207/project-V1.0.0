@@ -17,7 +17,7 @@ class IndexController extends HomeController {
 
 	//系统首页
     public function index(){
-            if (I()) {
+            if (I('logistics_id')) {
                $logistics_id = I('logistics_id');
                 $this->assign('logistics_id', $logistics_id);
                $logistics_info = M('Logistics')->where('logistics_id = ' . $logistics_id)->order('id desc')->select();
