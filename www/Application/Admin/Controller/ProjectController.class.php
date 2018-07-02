@@ -41,7 +41,7 @@ class ProjectController extends AdminController
      */
     public function add()
     {
-        if (I()) {
+        if (I('logistics_id')) {
             $logistics_info =  M('Logistics')->where(['logistics_id = '. I('logistics_id')])->select();
             if ($logistics_info) {
                 $this->success('已存在！', U('Project/index'));
