@@ -9,13 +9,13 @@
     <div class="tab-wrap">
         <div class="tab-content">
             <!-- 表单 -->
-            <form id="form" action="{:U('add')}" method="post" class="form-horizontal doc-modal-form">
+            <form id="form" action="{:U('update')}" method="post" class="form-horizontal doc-modal-form">
                 <!-- 基础 -->
                 <div id="tab1" class="tab-pane in tab1">
                     <div class="form-item cf">
                         <label class="item-label">物流单号<span class="check-tips">（请输入客户物流单号）</span></label>
                         <div class="controls">
-                            <input type="text" class="text input-large" name="logistics_id" value="{$logistics_id}">
+                            <input type="text" class="text input-large" name="logistics_id" value="{$logistics_id}" readonly="true">
                         </div>
                     </div>
                     <div class="form-item cf">

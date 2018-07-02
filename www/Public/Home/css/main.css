@@ -1,0 +1,19 @@
+@charset 'utf-8';
+body{
+  padding-top: 70px;
+}
+.table .last{
+  color: #ff9900;
+}
+.table .past{
+  color: #888;
+}
+.w-35p{
+  width: 35%;
+}
+.w-30p{
+  width: 30%;
+}
+.w-20p{
+  width: 20%;
+}

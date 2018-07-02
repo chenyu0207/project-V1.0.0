@@ -1,12 +1,12 @@
 <extend name="Base/common"/>
 
 <block name="header">
-    <header class="jumbotron subhead" id="overview">
-        <div class="container">
-            <h2>     我是谁，我在哪里，我要干什么？</h2>
-            <p class="lead"></p>
-        </div>
-    </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/main.css">
+    <title>物流查询系统</title>
 </block>
 
 <block name="side">
@@ -15,5 +15,79 @@
 </block>
 
 <block name="body">
+    <!-- 页头 -->
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <div class="container">
+            <a href="javascript:;" class="navbar-brand">物流查询系统</a>
+        </div>
+    </div>
+    <!-- 查询 -->
+    <div class="input-group container" id="thisForm">
+        <form id="form" action="{:U('index')}" method="post" class="form-horizontal doc-modal-form">
+            <input type="text" class="form-control" placeholder="请输入订单编号" id="" name = 'logistics_id' value="{$logistics_id}" required>
+            <div class="invalid-feedback">
+                订单编号不能为空~
+            </div>
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" id="searchBtn">查 询</button>
+            </div>
+        </form>
+    </div>
+    <!-- 查询结果 -->
+    <div class="container">
+        <table class="table"  id="textStatus">
+            <thead>
+            <tr>
+                <th class="w-35p">时间</th>
+                <th>运单状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <volist name="_list" id="vo">
+                <if condition="$vo['status'] eq 1 ">
+                    <tr class="last">
+                        <td class="time">{$vo.time}</td>
+                        <td class="status">{$vo.logistics_msg}</td>
+                    </tr>
+                   <else/>
+                    <tr class="past">
+                        <td class="time">{$vo.time}</td>
+                        <td class="status">{$vo.logistics_msg}</td>
+                    </tr>
+                </if>
+            </volist>
+            <!--<tr class="last">-->
+                <!--<td class="time">2018-07-01 00:55:46</td>-->
+                <!--<td class="status">[北京市]已签收,感谢使用顺丰,期待再次为您服务</td>-->
+            <!--</tr>-->
+            <!--<tr class="past">-->
+                <!--<td class="time">2018-07-01 00:47:26</td>-->
+                <!--<td class="status">[北京市]快件交给杨荣斌，正在派送途中（联系电话：17611772077）</td>-->
+            <!--</tr>-->
+            <!--<tr class="past">-->
+                <!--<td class="time">2018-07-01 00:40:26</td>-->
+                <!--<td class="status">[北京市]快件到达 【北京东城聚宝营业点】</td>-->
+            <!--</tr>-->
+            <!--<tr class="past">-->
+                <!--<td class="time">2018-06-30 23:40:03</td>-->
+                <!--<td class="status">[北京市]快件到达 【北京顺义集散中心】</td>-->
+            <!--</tr>-->
+            <!--<tr class="past">-->
+                <!--<td class="time">2018-06-30 22:33:55</td>-->
+                <!--<td class="status">[北京市]快件到达 【北京国航集散中心】</td>-->
+            <!--</tr>-->
+            <!--<tr class="past">-->
+                <!--<td class="time">2018-06-30 20:08:46</td>-->
+                <!--<td class="status">[北京市]顺丰速运 已收取快件</td>-->
+            <!--</tr>-->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="__PUBLIC__/Home/js/libs/jquery.min.js"></script>
+    <script src="__PUBLIC__/Home/js/libs/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/Home/js/main.js"></script>
+</block>
+<block name="script">
 
 </block>
