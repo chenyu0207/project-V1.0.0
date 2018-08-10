@@ -21,6 +21,8 @@ define ( 'APP_DEBUG', true );
  */
 define ( 'APP_PATH', './Application/' );
 
+define('ORIGIN_PATH',dirname( __FILE__));
+
 /**
  * 缓存目录设置
  * 此目录必须可写，建议移动到非WEB目录
