@@ -2,118 +2,109 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-<title><?php echo C('WEB_SITE_TITLE');?></title>
-<link href="/Public/static/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="/Public/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 <link href="/Public/static/bootstrap/css/docs.css" rel="stylesheet">
 <link href="/Public/static/bootstrap/css/onethink.css" rel="stylesheet">
-
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-<script src="/Public/static/bootstrap/js/html5shiv.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="/Public/Home/css/bootstrap.min.css">
+<link rel="stylesheet" href="/Public/Home/css/main.css">
+<title>物流查询系统</title>
 <![endif]-->
 
-<!--[if lt IE 9]>
-<script type="text/javascript" src="/Public/static/jquery-1.10.2.min.js"></script>
-<![endif]-->
-<!--[if gte IE 9]><!-->
-<script type="text/javascript" src="/Public/static/jquery-2.0.3.min.js"></script>
-<script type="text/javascript" src="/Public/static/bootstrap/js/bootstrap.min.js"></script>
-<!--<![endif]-->
-<!-- 页面header钩子，一般用于加载插件CSS文件和代码 -->
+<script src="/Public/Home/js/libs/jquery.min.js"></script>
+<script src="/Public/Home/js/libs/bootstrap.min.js"></script>
+<script src="/Public/Home/js/main.js"></script>
+
 <?php echo hook('pageHeader');?>
 
 </head>
 <body>
 	<!-- 头部 -->
-	<!-- 导航条
-================================================== -->
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="<?php echo U('index/index');?>">OneThink</a>
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <?php $__NAV__ = D('Channel')->lists(); if(is_array($__NAV__)): $i = 0; $__LIST__ = $__NAV__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$nav): $mod = ($i % 2 );++$i;?><li>
-                            <a href="<?php echo (get_nav_url($nav["url"])); ?>"><?php echo ($nav["title"]); ?></a>
-                        </li><?php endforeach; endif; else: echo "" ;endif; ?>
-                </ul>
-            </div>
-            <div class="nav-collapse collapse pull-right">
-                <?php if(is_login()): ?><ul class="nav" style="margin-right:0">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-left:0;padding-right:0"><?php echo get_username();?> <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="<?php echo U('User/profile');?>">修改密码</a></li>
-                                <li><a href="<?php echo U('User/logout');?>">退出</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                <?php else: ?>
-                    <ul class="nav" style="margin-right:0">
-                        <li>
-                            <a href="<?php echo U('User/login');?>">登录</a>
-                        </li>
-                        <li>
-                            <a href="<?php echo U('User/register');?>" style="padding-left:0;padding-right:0">注册</a>
-                        </li>
-                    </ul><?php endif; ?>
-            </div>
-        </div>
-    </div>
-</div>
-
+	
 	<!-- /头部 -->
 	
 	<!-- 主体 -->
 	
-    <header class="jumbotron subhead" id="overview">
-        <div class="container">
-            <h2>源自相同起点，演绎不同精彩！</h2>
-            <p class="lead"></p>
-        </div>
-    </header>
-
 <div id="main-container" class="container">
     <div class="row">
         
-<!-- 左侧 nav
-================================================== -->
-    <div class="span3 bs-docs-sidebar">
-        <ul class="nav nav-list bs-docs-sidenav">
-            <?php echo W('Category/lists', array(1, true));?>
-        </ul>
-    </div>
-
-        
-    <div class="span9">
-        <!-- Contents
+        <!-- 左侧 nav
         ================================================== -->
-        <section id="contents">
-            <?php $category=D('Category')->getChildrenId(1);$__LIST__ = D('Document')->page(0,10)->lists($category, '`id` DESC', 1,true); if(is_array($__LIST__)): $i = 0; $__LIST__ = $__LIST__;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><div class="">
-                    <h3><a href="<?php echo U('Article/detail?id='.$list['id']);?>"><?php echo ($list["title"]); ?></a></h3>
-                </div>
-                <div>
-                    <p class="lead"><?php echo ($list["description"]); ?></p>
-                </div>
-                <div>
-                    <span><a href="<?php echo U('Article/detail?id='.$list['id']);?>">查看全文</a></span>
-                    <span class="pull-right">
-                        <span class="author"><?php echo (get_username($list["uid"])); ?></span>
-                        <span>于 <?php echo (date('Y-m-d H:i',$list["create_time"])); ?></span> 发表在 <span>
-                        <a href="<?php echo U('Article/lists?category='.get_category_name($list['category_id']));?>"><?php echo (get_category_title($list["category_id"])); ?></a></span> 
-                    </span>
-                </div>
-                <hr/><?php endforeach; endif; else: echo "" ;endif; ?>
-
-        </section>
-    </div>
+            <div class="span3 bs-docs-sidebar">
+                
+                <ul class="nav nav-list bs-docs-sidenav">
+                    <?php echo W('Category/lists', array($category['id'], ACTION_NAME == 'index'));?>
+                </ul>
+            </div>
+        
+        
+    <!-- 页头 -->
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+        <div class="container">
+            <a href="javascript:;" class="navbar-brand">物流查询系统</a>
         </div>
+    </div>
+    <!-- 查询 -->
+    <div class="input-group container" id="thisForm">
+        <form id="form" action="<?php echo U('index');?>" method="post" class="form-horizontal doc-modal-form">
+            <input type="text" class="form-control" placeholder="请输入订单编号" id="searchArea" name = 'logistics_id' value="<?php echo ($logistics_id); ?>" required>
+            <div class="invalid-feedback">
+                订单编号不能为空~
+            </div>
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" id="searchBtn">查 询</button>
+            </div>
+        </form>
+    </div>
+    <!-- 查询结果 -->
+    <div class="container">
+        <?php if($_list != '' ): ?><table class="table"  id="textStatus">
+        <?php else: ?>
+            <table class="table" style="display: none" id="textStatus"><?php endif; ?>
+            <thead>
+            <tr>
+                <th class="w-35p">时间</th>
+                <th>运单状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php if(is_array($_list)): $i = 0; $__LIST__ = $_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo['status'] == 1 ): ?><tr class="last">
+                        <td class="time"><?php echo ($vo["time"]); ?></td>
+                        <td class="status"><?php echo ($vo["logistics_msg"]); ?></td>
+                    </tr>
+                   <?php else: ?>
+                    <tr class="past">
+                        <td class="time"><?php echo ($vo["time"]); ?></td>
+                        <td class="status"><?php echo ($vo["logistics_msg"]); ?></td>
+                    </tr><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+            <!--<tr class="last">-->
+                <!--<td class="time">2018-07-01 00:55:46</td>-->
+                <!--<td class="status">[北京市]已签收,感谢使用顺丰,期待再次为您服务</td>-->
+            <!--</tr>-->
+            <!--<tr class="past">-->
+                <!--<td class="time">2018-07-01 00:47:26</td>-->
+                <!--<td class="status">[北京市]快件交给杨荣斌，正在派送途中（联系电话：17611772077）</td>-->
+            <!--</tr>-->
+            <!--<tr class="past">-->
+                <!--<td class="time">2018-07-01 00:40:26</td>-->
+                <!--<td class="status">[北京市]快件到达 【北京东城聚宝营业点】</td>-->
+            <!--</tr>-->
+            <!--<tr class="past">-->
+                <!--<td class="time">2018-06-30 23:40:03</td>-->
+                <!--<td class="status">[北京市]快件到达 【北京顺义集散中心】</td>-->
+            <!--</tr>-->
+            <!--<tr class="past">-->
+                <!--<td class="time">2018-06-30 22:33:55</td>-->
+                <!--<td class="status">[北京市]快件到达 【北京国航集散中心】</td>-->
+            <!--</tr>-->
+            <!--<tr class="past">-->
+                <!--<td class="time">2018-06-30 20:08:46</td>-->
+                <!--<td class="status">[北京市]顺丰速运 已收取快件</td>-->
+            <!--</tr>-->
+            </tbody>
+        </table>
+    </div>
+
 
     </div>
 </div>
@@ -133,7 +124,7 @@
     ================================================== -->
     <footer class="footer">
       <div class="container">
-          <p> 本站由 <strong><a href="http://www.onethink.cn" target="_blank">OneThink</a></strong> 强力驱动</p>
+          <p> 本站由 <strong><a href="http://www.onethink.cn" target="_blank">#xxxx公司</a></strong> xxxx公司支持</p>
       </div>
     </footer>
 
@@ -149,6 +140,8 @@
 	}
 })();
 </script>
+
+
  <!-- 用于加载js代码 -->
 <!-- 页面footer钩子，一般用于加载插件JS文件和JS代码 -->
 <?php echo hook('pageFooter', 'widget');?>
