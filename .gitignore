@@ -1,3 +1,4 @@
 /TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
 .idea/
 www/Runtime/
+Uploads/
