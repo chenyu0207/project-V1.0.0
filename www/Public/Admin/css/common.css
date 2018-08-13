@@ -35,7 +35,7 @@
 
 /* 提醒框 */
 .alert {
-	color: #c09853;
+	color: #fff;
 	font-weight: bold;
 	border: 1px solid #fbeed5;
 	background-color: #fcf8e3;
@@ -46,8 +46,8 @@
     top: -2px;
     right: -21px;
     font: bold 20px/20px arial; 
-	color: #c09853;
-    opacity: 0.4;
+	color: #fff;
+    opacity: 1;
 }
 .alert .close:hover {
 	opacity: 0.6;
@@ -89,7 +89,7 @@ button.close {
     left: 220px;
     right: 20px;
     z-index: 3000;
-	margin-top: 20px;
+	margin-top: 10px;
 	padding-top: 12px;
 	padding-bottom: 12px;
     overflow: hidden;
@@ -98,7 +98,7 @@ button.close {
 #top-alert .close{
     right:35px;
     position: fixed;
-    top:75px;
+    top:70px;
 }
 .alert-content{
 	margin-left: 14px;
