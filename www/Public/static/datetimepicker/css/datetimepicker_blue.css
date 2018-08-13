@@ -248,7 +248,7 @@
 .datetimepicker table tr td.active.disabled[disabled],
 .datetimepicker table tr td.active.disabled:hover[disabled] {
   /*background-color: #0044cc;*/
-  background: #7963DF;
+  background: #03A9F4;
 }
 .datetimepicker table tr td.active:active,
 .datetimepicker table tr td.active:hover:active,
@@ -339,7 +339,7 @@
 .datetimepicker table tr td span.active:hover[disabled],
 .datetimepicker table tr td span.active.disabled[disabled],
 .datetimepicker table tr td span.active.disabled:hover[disabled] {
-  background-color: #7963DF;
+  background-color: #03A9F4;
 }
 .datetimepicker table tr td span.active:active,
 .datetimepicker table tr td span.active:hover:active,

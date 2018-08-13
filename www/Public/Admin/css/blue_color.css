@@ -9,15 +9,15 @@
  *******************************************/
 
 html,body,input,textarea,select,legend {
-	color: #635c73;
+	color: #444;
 	/*全局默认文字颜色*/
 }
 a {
-	color: #7b66ab;
+	color: #368db6;
 	/*全局默认链接颜色*/
 }
 a:hover{
-	color: #a47fe5;
+	color: #46b5e9;
 	/*全局默认链接悬停颜色*/
 }
 
@@ -53,7 +53,7 @@ a:hover{
 }
 .tab-nav .current a,
 .tab-nav .current a:hover {
-	border-color: #7b66ab #e0e0e0 #f6f6f6;
+	border-color: #2196F3 #e0e0e0 #f6f6f6;
 }
 
 
@@ -143,7 +143,7 @@ a:hover{
 /* 表单组件
 ------------------------------------------ */
 .text,.textarea {
-	border-color: #eeeeee;
+	border-color: #ccc;
 	background-color: #fff;
 }
 select {
@@ -193,8 +193,9 @@ select {
 }
 
 .focus{
-	border-color: #dad6eb;
-	box-shadow: 0 0 12px #e5e2fc;
+	border-color: #66afe9;
+	/* box-shadow: 0 0 12px #e5e2fc; */
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 /*********************************************
  * table.css 
@@ -238,22 +239,22 @@ select {
 /* 普通按钮 */
 .btn {
     color: #ffffff;
-	background-color: #7963df;
+	background-color: #2196f3;
 }
 .btn:hover {
     color: #ffffff;
-    background-color: #997eff;
+    background-color: #03a9f4;
 }
 
 /* 表单提交按钮(确定,保存,提交) */
 .submit-btn {
 	color: #fff;
-    background-color: #7d61dd;
+    background-color: #2196f3;
 	/*background-color: #df7003;*/
 }
 .submit-btn:hover {
     color: #fff;
-    background-color: #a285ff;
+    background-color: #03a9f4;
 	/*background-color: #f48a05;*/
 }
 .save-btn {
@@ -269,7 +270,7 @@ select {
 	background-color: #8893ae;
 }
 .btn-return:hover {
-	background-color: #8080FF;
+	background-color: #a1aece;
 }
 
 /*高级搜索箭头*/
@@ -322,7 +323,7 @@ select {
     background-color: #656565;
 }
 .main-nav .current a {
-    background-color: #1b82f1;
+    background-color: #2196f3;
 }
 
 /* 顶部右侧 用户bar */
