@@ -417,7 +417,7 @@ label.textarea ~ .check-tips {
 	font-weight: bold;
 	font-size: 16px;
 	border: 1px solid transparent;
-	border-top-width: 2px;
+	border-top-width: 3px;
 }
 .tab-nav .current a,
 .tab-nav .current a:hover {

@@ -9,15 +9,15 @@
  *******************************************/
 
 html,body,input,textarea,select,legend {
-	color: #635c73;
+	color: #444;
 	/*全局默认文字颜色*/
 }
 a {
-	color: #7b66ab;
+	color: #368db6;
 	/*全局默认链接颜色*/
 }
 a:hover{
-	color: #a47fe5;
+	color: #46b5e9;
 	/*全局默认链接悬停颜色*/
 }
 
@@ -53,7 +53,7 @@ a:hover{
 }
 .tab-nav .current a,
 .tab-nav .current a:hover {
-	border-color: #7b66ab #e0e0e0 #f6f6f6;
+	border-color: #2196F3 #e0e0e0 #f6f6f6;
 }
 
 
@@ -143,7 +143,7 @@ a:hover{
 /* 表单组件
 ------------------------------------------ */
 .text,.textarea {
-	border-color: #eeeeee;
+	border-color: #ccc;
 	background-color: #fff;
 }
 select {
@@ -193,8 +193,9 @@ select {
 }
 
 .focus{
-	border-color: #dad6eb;
-	box-shadow: 0 0 12px #e5e2fc;
+	border-color: #66afe9;
+	/* box-shadow: 0 0 12px #e5e2fc; */
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 /*********************************************
  * table.css 
@@ -238,22 +239,22 @@ select {
 /* 普通按钮 */
 .btn {
     color: #ffffff;
-	background-color: #7963df;
+	background-color: #2196f3;
 }
 .btn:hover {
     color: #ffffff;
-    background-color: #997eff;
+    background-color: #03a9f4;
 }
 
 /* 表单提交按钮(确定,保存,提交) */
 .submit-btn {
 	color: #fff;
-    background-color: #7d61dd;
+    background-color: #2196f3;
 	/*background-color: #df7003;*/
 }
 .submit-btn:hover {
     color: #fff;
-    background-color: #a285ff;
+    background-color: #03a9f4;
 	/*background-color: #f48a05;*/
 }
 .save-btn {
@@ -269,7 +270,7 @@ select {
 	background-color: #8893ae;
 }
 .btn-return:hover {
-	background-color: #8080FF;
+	background-color: #a1aece;
 }
 
 /*高级搜索箭头*/
@@ -299,7 +300,61 @@ select {
 	text-shadow: 0 1px 0 #f5f5f5;
 }
 
+/* 确定、提交 */
+.btn-success{
+	color:#fff;
+    background-color:#28a745;
+    border-color:#479459
+}
+.btn-success:hover {
+    color:#fff;
+    background-color:#218838;
+    border-color:#1e7e34
+}
+.btn-success.focus, .btn-success:focus {
+    box-shadow:0 0 0 .2rem rgba(40, 167, 69, .5)
+}
+.btn-success.disabled, .btn-success:disabled {
+    color:#fff;
+    background-color:#28a745;
+    border-color:#28a745
+}
+.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+    color:#fff;
+    background-color:#1e7e34;
+    border-color:#1c7430
+}
+.btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus, .show>.btn-success.dropdown-toggle:focus {
+    box-shadow:0 0 0 .2rem rgba(40, 167, 69, .5)
+}
 
+/* 危险、删除 */
+.btn-danger {
+    color:#fff;
+    background-color:#dc3545;
+    border-color:#dc3545
+}
+.btn-danger:hover {
+    color:#fff;
+    background-color:#c82333;
+    border-color:#bd2130
+}
+.btn-danger.focus, .btn-danger:focus {
+    box-shadow:0 0 0 .2rem rgba(220, 53, 69, .5)
+}
+.btn-danger.disabled, .btn-danger:disabled {
+    color:#fff;
+    background-color:#dc3545;
+    border-color:#dc3545
+}
+.btn-danger:not(:disabled):not(.disabled).active, .btn-danger:not(:disabled):not(.disabled):active, .show>.btn-danger.dropdown-toggle {
+    color:#fff;
+    background-color:#bd2130;
+    border-color:#b21f2d
+}
+.btn-danger:not(:disabled):not(.disabled).active:focus, .btn-danger:not(:disabled):not(.disabled):active:focus, .show>.btn-danger.dropdown-toggle:focus {
+    box-shadow:0 0 0 .2rem rgba(220, 53, 69, .5)
+}
 /************************************* 
  * style.css
  *************************************/
@@ -322,7 +377,7 @@ select {
     background-color: #656565;
 }
 .main-nav .current a {
-    background-color: #7963df;
+    background-color: #2196f3;
 }
 
 /* 顶部右侧 用户bar */
