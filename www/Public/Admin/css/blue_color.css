@@ -517,7 +517,7 @@ select {
 #login-page .login-form {
     background-color: #fff;
     box-shadow: 0 0 26px #041A36;
-    border-top-color: #8357c4;
+    border-top-color: #2196F3;
 }
 #login-page .login-form h3 {
     color: #8D9CAA;
@@ -529,8 +529,8 @@ select {
     border-color:  #ececec;
 }
 #login-page .login-form .focus {
-    border-color: #c2a0f3;
-    box-shadow: 0 0 12px #f0d4ff;
+    border-color: #2196f3;
+    box-shadow: 0 0 12px #d4ecff;
 }
 #login-page .login-form .icon-login-user,
 #login-page .login-form .icon-login-pwd,
@@ -552,10 +552,10 @@ select {
 }
 #login-page .login-form .login-btn {
     color: #FFFFFF;
-    background-color: #8357c4;
+    background-color: #2196f3;
 }
 #login-page .login-form .login-btn:hover {
-    background-color: #8460ec;
+    background-color: #50aaf3;
 }
 #login-page .login-form .login-btn[disabled] {
     opacity: 0.6;

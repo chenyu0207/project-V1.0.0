@@ -60,10 +60,10 @@ img {
 .login-logo {
     display: inline-block;
     margin-right: 12px;
-    width: 30px;
+    width: 44px;
     height: 44px;
     vertical-align: top;
-    background: url(../images/login_logo.png) no-repeat 0 0 ;
+    background: url(../images/haori-logo.png) no-repeat 0px 0px;
 }
 .login-form .check-tips {
     color: #ff0000;
