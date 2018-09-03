@@ -141,7 +141,11 @@ class ProjectController extends AdminController
                         if ($extension =='csv') {
                             $objReader = \PHPExcel_IOFactory::createReader('CSV');
                         } else {
-                            $objReader = \PHPExcel_IOFactory::createReader('Excel5');
+                            if ($extension =='xlsx') {
+                                $objReader = \PHPExcel_IOFactory::createReader('Excel2007');
+                            } else {
+                                $objReader = \PHPExcel_IOFactory::createReader('Excel5');
+                            }
                         }
                         $cellName = array('A','B','C','D','E','F','G','H','I','J','K',
                             'L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','AA',
