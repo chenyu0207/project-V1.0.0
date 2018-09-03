@@ -186,24 +186,24 @@ class ProjectController extends AdminController
                             //获取K列的值
                             $rsv['remarks'] = $PHPExcel->getActiveSheet()->getCell("K" . $currentRow)->getValue();
                             if (is_object($rsv['remarks'])) $rsv['remarks'] = $rsv['remarks']->__toString();
-                            //获取L列的值
-                            $rsv['sender_name'] = $PHPExcel->getActiveSheet()->getCell("L" . $currentRow)->getValue();
-                            if (is_object($rsv['sender_name'])) $rsv['sender_name'] = $rsv['sender_name']->__toString();
-                            //获取M列的值
-                            $rsv['sender_phone'] = $PHPExcel->getActiveSheet()->getCell("M" . $currentRow)->getValue();
-                            if (is_object($rsv['sender_phone'])) $rsv['sender_phone'] = $rsv['sender_phone']->__toString();
-                            //获取N列的值
-                            $rsv['sender_prov'] = $PHPExcel->getActiveSheet()->getCell("N" . $currentRow)->getValue();
-                            if (is_object($rsv['sender_prov'])) $rsv['sender_prov'] = $rsv['sender_prov']->__toString();
-                            //获取O列的值
-                            $rsv['sender_city'] = $PHPExcel->getActiveSheet()->getCell("O" . $currentRow)->getValue();
-                            if (is_object($rsv['sender_city'])) $rsv['sender_city'] = $rsv['sender_city']->__toString();
-                            //获取P列的值
-                            $rsv['sender_area'] = $PHPExcel->getActiveSheet()->getCell("P" . $currentRow)->getValue();
-                            if (is_object($rsv['sender_area'])) $rsv['sender_area'] = $rsv['sender_area']->__toString();
-                            //获取Q列的值
-                            $rsv['sender_address'] = $PHPExcel->getActiveSheet()->getCell("Q" . $currentRow)->getValue();
-                            if (is_object($rsv['sender_address'])) $rsv['sender_address'] = $rsv['sender_address']->__toString();
+                            // //获取L列的值
+                            // $rsv['sender_name'] = $PHPExcel->getActiveSheet()->getCell("L" . $currentRow)->getValue();
+                            // if (is_object($rsv['sender_name'])) $rsv['sender_name'] = $rsv['sender_name']->__toString();
+                            // //获取M列的值
+                            // $rsv['sender_phone'] = $PHPExcel->getActiveSheet()->getCell("M" . $currentRow)->getValue();
+                            // if (is_object($rsv['sender_phone'])) $rsv['sender_phone'] = $rsv['sender_phone']->__toString();
+                            // //获取N列的值
+                            // $rsv['sender_prov'] = $PHPExcel->getActiveSheet()->getCell("N" . $currentRow)->getValue();
+                            // if (is_object($rsv['sender_prov'])) $rsv['sender_prov'] = $rsv['sender_prov']->__toString();
+                            // //获取O列的值
+                            // $rsv['sender_city'] = $PHPExcel->getActiveSheet()->getCell("O" . $currentRow)->getValue();
+                            // if (is_object($rsv['sender_city'])) $rsv['sender_city'] = $rsv['sender_city']->__toString();
+                            // //获取P列的值
+                            // $rsv['sender_area'] = $PHPExcel->getActiveSheet()->getCell("P" . $currentRow)->getValue();
+                            // if (is_object($rsv['sender_area'])) $rsv['sender_area'] = $rsv['sender_area']->__toString();
+                            // //获取Q列的值
+                            // $rsv['sender_address'] = $PHPExcel->getActiveSheet()->getCell("Q" . $currentRow)->getValue();
+                            // if (is_object($rsv['sender_address'])) $rsv['sender_address'] = $rsv['sender_address']->__toString();
                             if ($rsv['receive_name'] != "") {
                                 $data[] = $rsv;
                                 unset($rsv);
