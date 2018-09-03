@@ -28,7 +28,6 @@
             <thead>
             <tr>
                 <th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
-                <th class="">UID</th>
                 <th class="">寄件人</th>
                 <th class="">寄件人电话</th>
                 <th class="">寄件公司</th>
@@ -48,18 +47,17 @@
             <volist name="data" id="vo">
                 <tr>
                     <td><input class="ids" type="checkbox" name="id[]" value="{$vo.uid}" /></td>
-                    <td>{$vo.id} </td>
-                    <td>{$vo.receive_name} </td>
-                    <td>{$vo.receive_phone}</td>
-                    <td>{$vo.receive_prov}</td>
-                    <td>{$vo.receive_city}</td>
-                    <td>{$vo.receive_area} </td>
-                    <td>{$vo.receive_address}</td>
-                    <td>{$vo.goods_name}</td>
-                    <td>{$vo.goods_num}</td>
-                    <td>{$vo.goods_code} </td>
-                    <td>{$vo.sales_attr}</td>
-                    <td>{$vo.remarks}</td>
+                    <td>{$vo.sender_name} </td>
+                    <td>{$vo.sender_phone}</td>
+                    <td>{$vo.sender_company}</td>
+                    <td>{$vo.sender_address}</td>
+                    <td>{$vo.date} </td>
+                    <td>{$vo.addressee_name}</td>
+                    <td>{$vo.addressee_phone}</td>
+                    <td>{$vo.addressee_address}</td>
+                    <td>{$vo.waybill_number} </td>
+                    <td>{$vo.associated_number}</td>
+                    <td>{$vo.desc}</td>
                     <td>
                         <a href="{:U('Project/update?id='.$vo['id'])}" >更新状态</a>
 
