@@ -10,8 +10,9 @@
             <form action="{:U('Project/excel')}" method="post" enctype="multipart/form-data">
                 <input type="file" name="import"/>
                 <input type="hidden" name="table" value="tablename"/>
-                <input type="submit" value="导入"/>
+                <input type="submit" class="btn" value="导入"/>
             </form>
+            <input class="btn" type="button" value="发布" id="downPDF"/>
         </div>
 
         <!-- 高级搜索 -->
@@ -45,19 +46,19 @@
             </thead>
             <tbody>
             <volist name="data" id="vo">
-                <tr>
+                <tr class="click">
                     <td><input class="ids" type="checkbox" name="id[]" value="{$vo.uid}" /></td>
-                    <td>{$vo.sender_name} </td>
-                    <td>{$vo.sender_phone}</td>
-                    <td>{$vo.sender_company}</td>
-                    <td>{$vo.sender_address}</td>
-                    <td>{$vo.date} </td>
-                    <td>{$vo.addressee_name}</td>
-                    <td>{$vo.addressee_phone}</td>
-                    <td>{$vo.addressee_address}</td>
-                    <td>{$vo.waybill_number} </td>
-                    <td>{$vo.associated_number}</td>
-                    <td>{$vo.desc}</td>
+                    <td name="sender_name">{$vo.sender_name} </td>
+                    <td name="sender_phone">{$vo.sender_phone}</td>
+                    <td name="sender_company">{$vo.sender_company}</td>
+                    <td name="sender_address">{$vo.sender_address}</td>
+                    <td name="date">{$vo.date} </td>
+                    <td name="addressee_name">{$vo.addressee_name}</td>
+                    <td name="addressee_phone">{$vo.addressee_phone}</td>
+                    <td name="addressee_address">{$vo.addressee_address}</td>
+                    <td name="waybill_number">{$vo.waybill_number} </td>
+                    <td name="associated_number">{$vo.associated_number}</td>
+                    <td name="desc">{$vo.desc}</td>
                     <td>
                         <a href="{:U('Project/update?id='.$vo['id'])}" >更新状态</a>
 
@@ -89,6 +90,25 @@
                 url += '?' + query;
             }
             window.location.href = url;
+        });
+        $("#downPDF").click(function(){
+            console.log('111111');
+            var arr = new Array();
+            $("input[type='checkbox']:checked").each(function(e){
+                var tablerow = $(this).parent("tr");
+                console.log(tablerow);
+                arr['sender_name'] = tablerow.find("[name='sender_name']").val();
+                arr['sender_phone'] = tablerow.find("[name='sender_phone']").val();
+                arr['sender_address'] = tablerow.find("[name='sender_address']").val();
+                arr['date'] = tablerow.find("[name='date']").val();
+                arr['addressee_name'] = tablerow.find("[name='addressee_name']").val();
+                arr['addressee_phone'] = tablerow.find("[name='addressee_phone']").val();
+                arr['addressee_address'] = tablerow.find("[name='addressee_address']").val();
+                arr['waybill_number'] = tablerow.find("[name='waybill_number']").val();
+                arr['associated_number'] = tablerow.find("[name='associated_number']").val();
+                arr['desc'] = tablerow.find("[name='desc']").val();
+                console.log(arr);
+            });
         });
         //回车搜索
         $(".search-input").keyup(function(e){

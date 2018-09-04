@@ -93,7 +93,8 @@ class ProjectController extends AdminController
         if ($_FILES) {
             $data = $this->excelto();
             if (!empty($data)) {
-                $this->getPdf();
+                // $html = $this->fetch();
+                // $this->getPdf($html);
                 $this->assign('data', $data);
             } else {
                 $this->assign('data', false);
@@ -229,16 +230,17 @@ class ProjectController extends AdminController
     }
 
 
-    public function getPdf()
+    public function getPdf($html)
     {
         //引入PHPExcel类
         require_once ORIGIN_PATH . '/vendor/autoload.php';
         $mpdf = new \Mpdf\Mpdf();
         $mpdf->autoScriptToLang = true;
         $mpdf->autoLangToFont = true;
-        $mpdf->WriteHTML('<h1>老桔子</h1>', 2);
+        $mpdf->WriteHTML($html, 2);
         $mpdf->AddPage();
         $mpdf->WriteHTML('<h1>大家1!</h1>', 3);
         $mpdf->Output('hello.pdf', 'D');
+        return 12312312;
     }
 }
