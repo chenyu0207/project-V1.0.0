@@ -1,0 +1,136 @@
+@charset 'UTF-8';
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+.clear{
+    clear: both;
+}
+.wrap {
+    height: 100%;
+}
+
+.top {
+    width: 98%;
+    height: 7.778%;
+    margin: 0 auto;
+    border-bottom: 3px solid #333;
+    position: relative;
+}
+.logo{
+    height: 40px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 40px;
+}
+.haori-text{
+    font-size: 1.5rem;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.inter{
+    float: right;
+}
+.inter-text{
+    float: left;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+.inter_time{
+    float: left;
+    margin: 37px 0 0 10px;
+    font-size: 1.2rem;
+}
+/* 快递信息 */
+.md_info {
+    width: 98%;
+    height: 26.889%;
+    margin: 0 auto;
+    border-bottom: 3px solid #333;
+}
+.md_info_top{
+    padding: 10px;
+}
+.md_info_top ul li{
+    line-height: 25px;
+}
+
+.md_info_b_left{
+    display: inline-block;
+    width: 4rem;
+    padding: 20px;
+}
+.md_info_b_left span{
+    font-size: 1.5rem;
+}
+
+.md_info_b_right{
+    display: inline-block;
+    margin-top: 20px;
+}
+.md_info_b_right ul li{
+    line-height: 25px;
+}
+.li-title{
+    width: 6rem;
+    display: inline-block;
+}
+
+.barcode {
+    width: 98%;
+    height: 10.222%;
+    margin: 0 auto;
+    border-bottom: 3px solid #333;
+}
+
+.ship_code {
+    width: 98%;
+    height: 5.556%;
+    margin: 0 auto;
+    border-bottom: 3px solid #333;
+}
+
+.revicesPr_time {
+    width: 98%;
+    height: 8.333%;
+    margin: 0 auto;
+    border-bottom: 3px solid #333;
+}
+
+.involveOrader {
+    width: 98%;
+    height: 16.222%;
+    margin: 0 auto;
+    border-bottom: 3px solid #333;
+}
+
+.order_bottom {
+    width: 98%;
+    height: 16.667%;
+    margin: 0 auto;
+    border-bottom: 3px solid #333;
+}
+
+.o_b_left {
+    float: left;
+    width: 56.4%;
+    height: 100%;
+    border-right: 3px solid #333;
+}
+
+.o_b_right {
+    float: left;
+}

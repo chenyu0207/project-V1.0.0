@@ -95,8 +95,9 @@
         });
 
         $("#downPDF").on('click', function(){
-            // console.log('111111');
+             console.log('111111');
             var arr = [];
+            var data = [];
             $("input[type='checkbox']:checked").each(function(e){
                 // console.log(e);
                 if (e == 0) return;
@@ -110,11 +111,11 @@
                 arr['addressee_address'] = $(this).parents('td').siblings('td.addressee_address').text();
                 arr['waybill_number'] = $(this).parents('td').siblings('td.waybill_number').text();
                 arr['desc'] = $(this).parents('td').siblings('td.desc').text();
-                console.log(arr);
+                data.push(arr);
 
             });
 
-            // console.log(arr);
+             console.log(data);
         });
         //回车搜索
         $(".search-input").keyup(function(e){
