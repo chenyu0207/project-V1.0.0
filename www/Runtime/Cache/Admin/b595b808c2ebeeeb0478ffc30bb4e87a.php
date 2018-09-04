@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title><?php echo ((isset($meta_title) && ($meta_title !== ""))?($meta_title):'OneThink后台管理'); ?></title>
-    <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
-    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/base.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/common.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/module.css">
-    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/style.css" media="all">
-	<link rel="stylesheet" type="text/css" href="/Public/Admin/css/<?php echo (C("COLOR_STYLE")); ?>.css" media="all">
+    <link href="/onethink/www/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/base.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/common.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/module.css">
+    <link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/<?php echo (C("COLOR_STYLE")); ?>.css" media="all">
      <!--[if lt IE 9]>
-    <script type="text/javascript" src="/Public/static/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/onethink/www/Public/static/jquery-1.10.2.min.js"></script>
     <![endif]--><!--[if gte IE 9]><!-->
-    <script type="text/javascript" src="/Public/static/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/onethink/www/Public/static/jquery-2.0.3.min.js"></script>
     <!--<![endif]-->
 </head>
 <body class="index-body">

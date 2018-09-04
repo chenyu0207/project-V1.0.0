@@ -2,9 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>欢迎您登录OneThink</title>
-        <link rel="stylesheet" type="text/css" href="/Public/Admin/css/login.css" media="all">
-       	<link rel="stylesheet" type="text/css" href="/Public/Admin/css/<?php echo (C("COLOR_STYLE")); ?>.css" media="all">
+        <title>昊日商贸</title>
+        <link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/login.css" media="all">
+       	<link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/<?php echo (C("COLOR_STYLE")); ?>.css" media="all">
     </head>
     <body id="login-page">
         <div id="main-content">
@@ -13,18 +13,18 @@
             <div class="login-body">
                 <div class="login-main pr">
                     <form action="<?php echo U('login');?>" method="post" class="login-form">
-                        <h3 class="welcome"><i class="login-logo"></i>OneThink管理平台</h3>
+                        <h3 class="welcome"><i class="login-logo"></i>昊日商贸物流平台</h3>
                         <div id="itemBox" class="item-box">
                             <div class="item">
                                 <i class="icon-login-user"></i>
-                                <input type="text" name="username" placeholder="请填写用户名" autocomplete="off" />
+                                <input type="text" name="username" placeholder="用户名" autocomplete="off" />
                             </div>
-                            <span class="placeholder_copy placeholder_un">请填写用户名</span>
+                            <span class="placeholder_copy placeholder_un">用户名</span>
                             <div class="item b0">
                                 <i class="icon-login-pwd"></i>
-                                <input type="password" name="password" placeholder="请填写密码" autocomplete="off" />
+                                <input type="password" name="password" placeholder="密码" autocomplete="off" />
                             </div>
-                            <span class="placeholder_copy placeholder_pwd">请填写密码</span>
+                            <span class="placeholder_copy placeholder_pwd">密码</span>
                             <!--<div class="item verifycode">-->
                                 <!--<i class="icon-login-verifycode"></i>-->
                                 <!--<input type="text" name="verify" placeholder="请填写验证码" autocomplete="off">-->
@@ -47,10 +47,10 @@
             </div>
         </div>
 	<!--[if lt IE 9]>
-    <script type="text/javascript" src="/Public/static/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/onethink/www/Public/static/jquery-1.10.2.min.js"></script>
     <![endif]-->
     <!--[if gte IE 9]><!-->
-    <script type="text/javascript" src="/Public/static/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/onethink/www/Public/static/jquery-2.0.3.min.js"></script>
     <!--<![endif]-->
     <script type="text/javascript">
     	/* 登陆表单获取焦点变色 */
@@ -61,13 +61,13 @@
         });
 
     	//表单提交
-    	$(document)
-	    	.ajaxStart(function(){
-	    		$("button:submit").addClass("log-in").attr("disabled", true);
-	    	})
-	    	.ajaxStop(function(){
-	    		$("button:submit").removeClass("log-in").attr("disabled", false);
-	    	});
+    	// $(document)
+	    // 	.ajaxStart(function(){
+	    // 		$("button:submit").addClass("log-in").attr("disabled", true);
+	    // 	})
+	    // 	.ajaxStop(function(){
+	    // 		$("button:submit").removeClass("log-in").attr("disabled", false);
+	    // 	});
 
     	$("form").submit(function(){
     		var self = $(this);
@@ -76,7 +76,10 @@
 
     		function success(data){
     			if(data.status){
-    				window.location.href = data.url;
+                    self.find(".check-tips").text('')
+                    $("button:submit").addClass("log-in").attr("disabled", true);
+                    window.location.href = data.url;
+                    
     			} else {
     				self.find(".check-tips").text(data.info);
     				//刷新验证码

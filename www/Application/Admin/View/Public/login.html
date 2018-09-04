@@ -61,13 +61,13 @@
         });
 
     	//表单提交
-    	$(document)
-	    	.ajaxStart(function(){
-	    		$("button:submit").addClass("log-in").attr("disabled", true);
-	    	})
-	    	.ajaxStop(function(){
-	    		$("button:submit").removeClass("log-in").attr("disabled", false);
-	    	});
+    	// $(document)
+	    // 	.ajaxStart(function(){
+	    // 		$("button:submit").addClass("log-in").attr("disabled", true);
+	    // 	})
+	    // 	.ajaxStop(function(){
+	    // 		$("button:submit").removeClass("log-in").attr("disabled", false);
+	    // 	});
 
     	$("form").submit(function(){
     		var self = $(this);
@@ -76,6 +76,8 @@
 
     		function success(data){
     			if(data.status){
+                    self.find(".check-tips").text('')
+                    $("button:submit").addClass("log-in").attr("disabled", true);
                     window.location.href = data.url;
                     
     			} else {
