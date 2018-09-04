@@ -2,17 +2,17 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title><?php echo ((isset($meta_title) && ($meta_title !== ""))?($meta_title):'OneThink后台管理'); ?></title>
-    <link href="/onethink/www/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
-    <link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/base.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/common.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/module.css">
-    <link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/style.css" media="all">
-	<link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/<?php echo (C("COLOR_STYLE")); ?>.css" media="all">
+    <title><?php echo ((isset($meta_title) && ($meta_title !== ""))?($meta_title):' 昊日贸易 后台管理'); ?></title>
+    <link href="/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/base.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/common.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/module.css">
+    <link rel="stylesheet" type="text/css" href="/Public/Admin/css/style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/Public/Admin/css/<?php echo (C("COLOR_STYLE")); ?>.css" media="all">
      <!--[if lt IE 9]>
-    <script type="text/javascript" src="/onethink/www/Public/static/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/Public/static/jquery-1.10.2.min.js"></script>
     <![endif]--><!--[if gte IE 9]><!-->
-    <script type="text/javascript" src="/onethink/www/Public/static/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/Public/static/jquery-2.0.3.min.js"></script>
     <!--<![endif]-->
 </head>
 <body class="index-body">
@@ -43,13 +43,14 @@
 
     <!-- 主体 -->
     <div id="indexMain" class="index-main">
+        <img src="https://cms-origin-cn.battle.net/cms/template_resource/3NIF0FCU4BKB1474352142188.jpg">
        <!-- 插件块 -->
-       <div class="container-span"><?php echo hook('AdminIndex');?></div>
+       <!--<div class="container-span"><?php echo hook('AdminIndex');?></div>-->
     </div>
 
     <!-- 底部版权 -->
     <div class="cont-ft">
-        <div class="copyright"> ©2013 <a href="http://www.topthink.net">topthink.net</a> 上海顶想信息科技有限公司版权所有</div>
+        <div class="copyright"> ©2018 昊日进出口贸易</div>
     </div>
 
     <script type="text/javascript">

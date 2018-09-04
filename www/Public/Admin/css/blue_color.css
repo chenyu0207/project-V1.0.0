@@ -364,7 +364,7 @@ select {
     background-color: #353535;
 }
 .header .logo {
-    background: url(../images/blue_color/bg_icon.png) no-repeat 0 -45px;
+    background: url(../images/haori-logo-index.png) no-repeat 0 0px;
 }
 /* 主导航 */
 .main-nav a {
@@ -382,7 +382,7 @@ select {
 
 /* 顶部右侧 用户bar */
 .header .user-bar .user-entrance {
-    background: url(../images/blue_color/bg_icon.png) no-repeat -150px 0;
+    background: url(../images/haori-logo-index.png) no-repeat -150px 0;
 }
 .header .user-menu {
     border-color: #ddd;
@@ -413,15 +413,15 @@ select {
 /* 侧边图标 */
 .subnav h3 .icon {
 	/* 展开后图标 */
-    background: url(../images/blue_color/bg_icon.png) no-repeat -100px 0px;
+    background: url(../images/haori-logo-index.png) no-repeat -100px 0px;
 }
 .subnav h3 .icon-fold {
 	/* 收起后图标 */
-    background: url(../images/blue_color/bg_icon.png) no-repeat -75px 0px;
+    background: url(../images/haori-logo-index.png) no-repeat -75px 0px;
 }
 .recycle {
 	/* 回收站图标 */
-    background: url(../images/blue_color/bg_icon.png) no-repeat -125px 0px;
+    background: url(../images/haori-logo-index.png) no-repeat -125px 0px;
 }
 
 /* 左侧二级菜单 */
@@ -535,7 +535,7 @@ select {
 #login-page .login-form .icon-login-user,
 #login-page .login-form .icon-login-pwd,
 #login-page login-form .icon-login-verifycode {
-    background: url("../images/icon24_login.png") no-repeat;
+    background: url("../images/haori-logo-index.png") no-repeat;
 }
 #login-page .login-form .icon-login-user {
     background-position: 0 0;
@@ -572,7 +572,7 @@ select {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 #login-page .logo-img {
-    background: url(../images/logo.png) no-repeat 0 center;
+    background: url(../images/haori-logo.png) no-repeat 0 center;
 }
 
 #login-page .welcome{
