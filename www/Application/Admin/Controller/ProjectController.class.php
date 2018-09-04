@@ -101,7 +101,7 @@ class ProjectController extends AdminController
             }
             // var_dump($data);
         }
-        $this->display('pdf_temp');
+        $this->display();
     }
     /**
      * Excel导入函数
