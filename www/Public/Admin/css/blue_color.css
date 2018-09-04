@@ -535,7 +535,7 @@ select {
 #login-page .login-form .icon-login-user,
 #login-page .login-form .icon-login-pwd,
 #login-page login-form .icon-login-verifycode {
-    background: url("../images/haori-logo-index.png") no-repeat;
+    background: url("../images/icon24_login.png") no-repeat;
 }
 #login-page .login-form .icon-login-user {
     background-position: 0 0;

@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>昊日商贸</title>
-        <link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/login.css" media="all">
-       	<link rel="stylesheet" type="text/css" href="/onethink/www/Public/Admin/css/<?php echo (C("COLOR_STYLE")); ?>.css" media="all">
+        <link rel="stylesheet" type="text/css" href="/Public/Admin/css/login.css" media="all">
+       	<link rel="stylesheet" type="text/css" href="/Public/Admin/css/<?php echo (C("COLOR_STYLE")); ?>.css" media="all">
     </head>
     <body id="login-page">
         <div id="main-content">
@@ -47,10 +47,10 @@
             </div>
         </div>
 	<!--[if lt IE 9]>
-    <script type="text/javascript" src="/onethink/www/Public/static/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/Public/static/jquery-1.10.2.min.js"></script>
     <![endif]-->
     <!--[if gte IE 9]><!-->
-    <script type="text/javascript" src="/onethink/www/Public/static/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/Public/static/jquery-2.0.3.min.js"></script>
     <!--<![endif]-->
     <script type="text/javascript">
     	/* 登陆表单获取焦点变色 */
