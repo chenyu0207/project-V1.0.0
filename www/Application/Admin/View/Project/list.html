@@ -3,15 +3,10 @@
 <block name="body">
     <!-- 标题栏 -->
     <div class="main-title">
-        <h2>物流信息上传</h2>
+        <h2>物流历史记录</h2>
     </div>
     <div class="cf">
         <div class="fl">
-            <form action="{:U('Project/excel')}" method="post" enctype="multipart/form-data">
-                <input type="file" name="import"/>
-                <input type="hidden" name="table" value="tablename"/>
-                <input type="submit" class="btn" value="导入"/>
-            </form>
             <input class="btn" type="button" value="发布" id="downPDF"/>
         </div>
 
@@ -41,7 +36,7 @@
                 <th class="">关联单号</th>
                 <th class="">内容描述</th>
 
-                <th class="">操作</th>
+                <!--<th class="">操作</th>-->
             </tr>
             </thead>
             <tbody>
@@ -61,11 +56,11 @@
                     <td class="waybill_number" name="waybill_number">{$vo.waybill_number} </td>
                     <td class="associated_number" name="associated_number">{$vo.associated_number}</td>
                     <td class="desc" name="desc">{$vo.desc}</td>
-                    <td>
-                        <a href="{:U('Project/update?id='.$vo['id'])}" >更新状态</a>
+                    <!--<td>-->
+                        <!--<a href="{:U('Project/update?id='.$vo['id'])}" >更新状态</a>-->
 
-                        <a href="{:U('Project/del?id='.$vo['id'])}" class="confirm ajax-get">删除</a>
-                    </td>
+                        <!--<a href="{:U('Project/del?id='.$vo['id'])}" class="confirm ajax-get">删除</a>-->
+                    <!--</td>-->
                 </tr>
             </volist>
             </tbody>
@@ -95,7 +90,7 @@
         });
 
         $("#downPDF").on('click', function(){
-             console.log('111111');
+            console.log('111111');
             var arr = [];
             var data = [];
             $("input[type='checkbox']:checked").each(function(e){
@@ -115,7 +110,7 @@
 
             });
 
-             console.log(data);
+            console.log(data);
         });
         //回车搜索
         $(".search-input").keyup(function(e){

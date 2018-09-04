@@ -36,6 +36,17 @@ class ProjectController extends AdminController
     }
 
     /**
+     * 物流列表页
+     * @author chenyu
+     */
+    public function listIndex()
+    {
+        $info =  M('simple')->order('id desc')->select();
+        $this->assign('data', $info);
+        $this->display('list');
+    }
+
+    /**
      * 物流数据新增
      * @author chenyu
      */
