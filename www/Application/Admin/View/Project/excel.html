@@ -28,7 +28,7 @@
         <table class="">
             <thead>
             <tr>
-                <th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
+                <!-- <th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th> -->
                 <th class="">寄件人</th>
                 <th class="">寄件人电话</th>
                 <th class="">寄件公司</th>
@@ -46,10 +46,7 @@
             </thead>
             <tbody>
             <volist name="data" id="vo">
-                <tr class="click">
-                    <td>
-                        <input class="ids" type="checkbox" name="id[]" value="{$vo.uid}" />
-                    </td>
+                <tr class="data_tr">
                     <td class="sender_name" name="sender_name">{$vo.sender_name} </td>
                     <td class="sender_phone" name="sender_phone">{$vo.sender_phone}</td>
                     <td class="sender_company" name="sender_company">{$vo.sender_company}</td>
@@ -94,29 +91,54 @@
             window.location.href = url;
         });
 
-        $("#downPDF").on('click', function(){
-             console.log('111111');
-            var arr = [];
-            var data = [];
-            $("input[type='checkbox']:checked").each(function(e){
-                // console.log(e);
-                if (e == 0) return;
-                arr['sender_name'] = $(this).parents('td').siblings('td.sender_name').text();
-                arr['sender_phone'] = $(this).parents('td').siblings('td.sender_phone').text();
-                arr['sender_company'] = $(this).parents('td').siblings('td.sender_company').text();
-                arr['sender_address'] = $(this).parents('td').siblings('td.sender_address').text();
-                arr['date'] = $(this).parents('td').siblings('td.date').text();
-                arr['addressee_name'] = $(this).parents('td').siblings('td.addressee_name').text();
-                arr['addressee_phone'] = $(this).parents('td').siblings('td.addressee_phone').text();
-                arr['addressee_address'] = $(this).parents('td').siblings('td.addressee_address').text();
-                arr['waybill_number'] = $(this).parents('td').siblings('td.waybill_number').text();
-                arr['desc'] = $(this).parents('td').siblings('td.desc').text();
-                data.push(arr);
 
+        
+
+
+        $('#downPDF').on('click', function() {
+            // var tdData = [];
+            var json = {};
+            $('.data_tr').each(function (e) {
+                var arr = [];
+                arr['sender_name'] = $(this).children('td.sender_name').text()
+                arr['sender_phone'] = $(this).children('td.sender_phone').text()
+                arr['sender_company'] = $(this).children('td.sender_company').text()
+                arr['sender_address'] = $(this).children('td.sender_address').text()
+                arr['date'] = $(this).children('td.date').text()
+                arr['addressee_name'] = $(this).children('td.addressee_name').text()
+                arr['addressee_phone'] = $(this).children('td.addressee_phone').text()
+                arr['addressee_address'] = $(this).children('td.addressee_address').text()
+                arr['waybill_number'] = $(this).children('td.waybill_number').text()
+                arr['desc'] = $(this).children('td.desc').text()
+                // console.log(arr);
+                json[e] = arr;
             });
+            console.log(json);
+        })
 
-             console.log(data);
-        });
+        // $("#downPDF").on('click', function(){
+        //      console.log('111111');
+        //     var arr = [];
+        //     var data = [];
+        //     $("input[type='checkbox']:checked").each(function(e){
+        //         // console.log(e);
+        //         if (e == 0) return;
+        //         arr['sender_name'] = $(this).parents('td').siblings('td.sender_name').text();
+        //         arr['sender_phone'] = $(this).parents('td').siblings('td.sender_phone').text();
+        //         arr['sender_company'] = $(this).parents('td').siblings('td.sender_company').text();
+        //         arr['sender_address'] = $(this).parents('td').siblings('td.sender_address').text();
+        //         arr['date'] = $(this).parents('td').siblings('td.date').text();
+        //         arr['addressee_name'] = $(this).parents('td').siblings('td.addressee_name').text();
+        //         arr['addressee_phone'] = $(this).parents('td').siblings('td.addressee_phone').text();
+        //         arr['addressee_address'] = $(this).parents('td').siblings('td.addressee_address').text();
+        //         arr['waybill_number'] = $(this).parents('td').siblings('td.waybill_number').text();
+        //         arr['desc'] = $(this).parents('td').siblings('td.desc').text();
+        //         data.push(arr);
+
+        //     });
+
+        //      console.log(data);
+        // });
         //回车搜索
         $(".search-input").keyup(function(e){
             if(e.keyCode === 13){
