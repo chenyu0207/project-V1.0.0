@@ -104,8 +104,7 @@ class ProjectController extends AdminController
         if ($_FILES) {
             $data = $this->excelto();
             if (!empty($data)) {
-                $html = $this->fetch('pdf_temp');
-                $this->getPdf($html);
+                $this->getPdf($data);
                 $this->assign('data', $data);
             } else {
                 $this->assign('data', false);
@@ -202,24 +201,6 @@ class ProjectController extends AdminController
                             //获取K列的值
                             $rsv['desc'] = $PHPExcel->getActiveSheet()->getCell("K" . $currentRow)->getValue();
                             if (is_object($rsv['desc'])) $rsv['desc'] = $rsv['desc']->__toString();
-                            // //获取L列的值
-                            // $rsv['sender_name'] = $PHPExcel->getActiveSheet()->getCell("L" . $currentRow)->getValue();
-                            // if (is_object($rsv['sender_name'])) $rsv['sender_name'] = $rsv['sender_name']->__toString();
-                            // //获取M列的值
-                            // $rsv['sender_phone'] = $PHPExcel->getActiveSheet()->getCell("M" . $currentRow)->getValue();
-                            // if (is_object($rsv['sender_phone'])) $rsv['sender_phone'] = $rsv['sender_phone']->__toString();
-                            // //获取N列的值
-                            // $rsv['sender_prov'] = $PHPExcel->getActiveSheet()->getCell("N" . $currentRow)->getValue();
-                            // if (is_object($rsv['sender_prov'])) $rsv['sender_prov'] = $rsv['sender_prov']->__toString();
-                            // //获取O列的值
-                            // $rsv['sender_city'] = $PHPExcel->getActiveSheet()->getCell("O" . $currentRow)->getValue();
-                            // if (is_object($rsv['sender_city'])) $rsv['sender_city'] = $rsv['sender_city']->__toString();
-                            // //获取P列的值
-                            // $rsv['sender_area'] = $PHPExcel->getActiveSheet()->getCell("P" . $currentRow)->getValue();
-                            // if (is_object($rsv['sender_area'])) $rsv['sender_area'] = $rsv['sender_area']->__toString();
-                            // //获取Q列的值
-                            // $rsv['sender_address'] = $PHPExcel->getActiveSheet()->getCell("Q" . $currentRow)->getValue();
-                            // if (is_object($rsv['sender_address'])) $rsv['sender_address'] = $rsv['sender_address']->__toString();
                             if ($rsv['sender_name'] != "") {
                                 $data[] = $rsv;
                                 unset($rsv);
@@ -240,20 +221,38 @@ class ProjectController extends AdminController
         }
     }
 
+    public function upJson()
+    {
+        $data = json_decode($_POST['json'], true);
+        $this->getPdf($data);
+    }
 
-    public function getPdf($html)
+    public function getPdf($data)
     {
         //引入PHPExcel类
         require_once ORIGIN_PATH . '/vendor/autoload.php';
-        $mpdf = new \Mpdf\Mpdf();
+        $mpdf = new \Mpdf\Mpdf(
+            [
+                ' margin_left '  =>  20,
+                ' margin_right '  =>  15,
+                ' margin_top '  =>  25,
+                ' margin_bottom '  =>  25,
+                ' margin_header '  =>  10,
+                ' margin_footer '  =>  10,
+                ' showBarcodeNumbers '  =>  true
+            ]
+        );
         $mpdf->autoScriptToLang = true;
         $mpdf->autoLangToFont = true;
         $main_css = file_get_contents(ORIGIN_PATH . '/Public/Admin/css/main.css');
-        $mpdf->WriteHTML($main_css, 1);
-        $mpdf->WriteHTML($html, 2);
-        $mpdf->AddPage();
-        $mpdf->WriteHTML('<h1>大家1!</h1>', 3);
+        foreach ($data as $k => $v) {
+            $this->assign('data', $v);
+            $html = $this->fetch('pdf_temp');
+            $mpdf->WriteHTML($main_css, 1);
+            $mpdf->WriteHTML($html, 2);
+            // $mpdf->AddPage();
+        }
         $mpdf->Output('hello.pdf', 'D');
-        return 12312312;
+        exit;
     }
 }

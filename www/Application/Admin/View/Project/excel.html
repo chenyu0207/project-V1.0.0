@@ -99,7 +99,7 @@
             // var tdData = [];
             var json = {};
             $('.data_tr').each(function (e) {
-                var arr = [];
+                var arr = {};
                 arr['sender_name'] = $(this).children('td.sender_name').text()
                 arr['sender_phone'] = $(this).children('td.sender_phone').text()
                 arr['sender_company'] = $(this).children('td.sender_company').text()
@@ -109,11 +109,21 @@
                 arr['addressee_phone'] = $(this).children('td.addressee_phone').text()
                 arr['addressee_address'] = $(this).children('td.addressee_address').text()
                 arr['waybill_number'] = $(this).children('td.waybill_number').text()
+                arr['associated_number'] = $(this).children('td.associated_number').text()
                 arr['desc'] = $(this).children('td.desc').text()
                 // console.log(arr);
                 json[e] = arr;
             });
             console.log(json);
+            $.ajax({
+                type: "post",
+                dataType: "json",
+                url:  "{:U('Project/upJson')}",
+                data: {"json": json, "status": 11},
+                success: function (data) {
+
+                }
+            })
         })
 
         // $("#downPDF").on('click', function(){
