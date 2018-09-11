@@ -12,7 +12,11 @@
                 <input type="hidden" name="table" value="tablename"/>
                 <input type="submit" class="btn" value="导入"/>
             </form>
-            <input class="btn" type="button" value="发布" id="downPDF"/>
+            <!-- 生成pdf面单 -->
+            <!-- <form action="{:U('Project/upJson')}" method="post" > -->
+                <input class="btn" type="button" value="生成PDF面单" id="downPDF"/>
+            <!-- </form> -->
+            
         </div>
 
         <!--&lt;!&ndash; 高级搜索 &ndash;&gt;-->
@@ -119,9 +123,12 @@
                 type: "post",
                 dataType: "json",
                 url:  "{:U('Project/upJson')}",
-                data: {"json": json, "status": 11},
-                success: function (data) {
-
+                data: {
+                    "json": json, 
+                    "status": 200
+                },
+                success: function (res) {
+                    console.log(res);
                 }
             })
         })

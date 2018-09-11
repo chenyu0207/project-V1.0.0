@@ -77,108 +77,14 @@
         </div>
 
         <!-- 条形码 -->
-        <div class="barcode">
+        <div class="barcode_area">
             <table style="width: 100%;text-align: center;">
-                <td align="center">C128A</td>
-                <td>CODE 128 A. Valid characters: [A-Z uppercase and control chars ASCII 0-31]. Checksum digit: automatic.</td>
-                <td class="barcodecell"><barcode code="CODE 128 A" type="C128A" class="barcode" /></td>
-                </tr>
                 <tr>
-                    <td align="center">C128B</td>
-                    <td>CODE 128 B. Valid characters: [Upper / Lower Case + All ASCII Printable Characters]. Checksum digit: automatic.</td>
-                    <td class="barcodecell"><barcode code="ABC123abc@456" type="C128B" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">C128C</td>
-                    <td>CODE 128 C. Valid characters: [0-9]. Must be an even number of digits. Checksum digit: automatic.</td>
-                    <td class="barcodecell"><barcode code="0123456789" type="C128C" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">EAN128C [A/B/C]</td>
-                    <td>EAN128 (A, B, and C). Specified variant of Code 128, utilising an FNC1 start code. Also known as UCC/EAN-128 or GS1-128. Valid characters: [cf. Code 128]. Checksum digit: automatic.</td>
-                    <td class="barcodecell"><barcode code="0112345678912343" type="EAN128C" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">C39</td>
-                    <td>CODE 39 - ANSI MH10.8M-1983 - USD-3 - 3 of 9. Valid characters: [0-9 A-Z \'-\' . Space $/+%]</td>
-                    <td class="barcodecell"><barcode code="TEC-IT" type="C39" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">C39+</td>
-                    <td>CODE 39 + CHECKSUM. Checksum digit: automatic.</td>
-                    <td class="barcodecell"><barcode code="39OR93" type="C39+" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">C39E</td>
-                    <td>CODE 39 EXTENDED. Valid characters: [ASCII-characters between 0..127]</td>
-                    <td class="barcodecell"><barcode code="CODE 39 E" type="C39E" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">C39E+</td>
-                    <td>CODE 39 EXTENDED + CHECKSUM. Checksum digit: automatic.</td>
-                    <td class="barcodecell"><barcode code="CODE 39 E+" type="C39E+" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">S25</td>
-                    <td>Standard 2 of 5. Valid characters: [0-9]</td>
-                    <td class="barcodecell"><barcode code="54321068" type="S25" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">S25+</td>
-                    <td>Standard 2 of 5 + CHECKSUM. Valid characters: [0-9]. Checksum digit: automatic.</td>
-                    <td class="barcodecell"><barcode code="54321068" type="S25+" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">I25</td>
-                    <td>Interleaved 2 of 5. Valid characters: [0-9]</td>
-                    <td class="barcodecell"><barcode code="54321068" type="I25" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">I25+</td>
-                    <td>Interleaved 2 of 5 + CHECKSUM. Valid characters: [0-9]. Checksum digit: automatic.</td>
-                    <td class="barcodecell"><barcode code="54321068" type="I25+" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">I25B</td>
-                    <td>Interleaved 2 of 5 with bearer bars. Valid characters: [0-9]</td>
-                    <td class="barcodecell"><barcode code="1234567" type="I25B" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">I25B+</td>
-                    <td>Interleaved 2 of 5 + CHECKSUM with bearer bars. Valid characters: [0-9]. Checksum digit: automatic.</td>
-                    <td class="barcodecell"><barcode code="1234567" type="I25B+" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">C93</td>
-                    <td>CODE 93 - USS-93 (extended). Valid characters: [ASCII-characters between 0..127]. Checksum digits: automatic.</td>
-                    <td class="barcodecell"><barcode code="39OR93" type="C93" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">MSI</td>
-                    <td>MSI. Modified Plessey. Valid characters: [0-9]</td>
-                    <td class="barcodecell"><barcode code="01234567897" type="MSI" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">MSI+</td>
-                    <td>MSI + CHECKSUM (module 11). Checksum digit: automatic.</td>
-                    <td class="barcodecell"><barcode code="0123456789" type="MSI+" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">CODABAR</td>
-                    <td>CODABAR. Valid characters: [0-9 \'-\' $:/.+ ABCD] ABCD are used as stop and start characters e.g. A34698735B</td>
-                    <td class="barcodecell"><barcode code="A34698735B" type="CODABAR" class="barcode" /></td>
-                </tr>
-                <tr>
-                    <td align="center">CODE11</td>
-                    <td>CODE 11. Valid characters: [0-9 and \'-\']. Checksum digits: 1 (or 2 if length of code is > 10 characters) - automatic.</td>
-                    <td class="barcodecell"><barcode code="123-456-789" type="CODE11" class="barcode" /></td>
-                </tr>
-                <tr>
-
-                    <!--<td class =“barcodecell”> <barcode code = "01234567897" type ="MSI" class ="barcode"/> </td>-->
-                    <!--<td>-->
-                        <!--<img src="" alt="这里是条形码">-->
-                    <!--</td>-->
+                    <!-- <td align="center">C128A</td> -->
+                    <!-- <td>CODE 128 A. Valid characters: [A-Z uppercase and control chars ASCII 0-31]. Checksum digit: automatic.</td> -->
+                    <td class="barcodecell" >
+                        <barcode size="1" height="2.2" code="{$data.waybill_number}" type="C128A" class="barcode" />
+                    </td>
                 </tr>
             </table>
             
@@ -214,7 +120,7 @@
                 <tr>
                     <td style="padding-top: 50px;font-size: 20px;padding-right: 30px;">{$data.waybill_number}</td>
                     <td style="padding-top: 20px;">
-                        <img class="io_barcode" src="" alt="这里还是条形码">
+                        <barcode size="1" height="1.5" code="{$data.waybill_number}" type="C128A" class="barcode" />
                     </td>
                 </tr>
             </table>
@@ -251,7 +157,8 @@
                 </table>
             </div>
             <div class="o_b_right">
-                <span>内件描述：{$data.desc}</span>
+                <span>内件描述：</span>
+                <p>{$data.desc}</p>
             </div>
         </div>
     </div>

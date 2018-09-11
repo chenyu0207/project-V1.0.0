@@ -341,7 +341,7 @@
   [hidden] {
     display: none;
   }
-  
+
 body,
 html {
     width: 100%;
@@ -363,9 +363,12 @@ ul li {
 .wrap {
     height: 100%;
 }
-
+/* css3打印设置选项 */
+@page{
+    margin: 10pt;
+}
 .top {
-    width: 98%;
+    width: 99%;
     height: 7.778%;
     margin: 0 auto;
     border-bottom: 3px solid #333;
@@ -396,7 +399,7 @@ ul li {
 }
 /* 快递信息 */
 .md_info {
-    width: 98%;
+    width: 99%;
     height: 22.889%;
     margin: 0 auto;
     border-bottom: 3px solid #333;
@@ -440,20 +443,15 @@ ul li {
 .md_info_b_right ul li span:nth-child(2){
     font-size: 20px;
 }
-.barcode {
-    width: 98%;
+.barcode_area {
+    width: 99%;
     height: 10.222%;
     margin: 0 auto;
     border-bottom: 3px solid #333;
 }
-.barcode img{
-    background: #aaa;
-    width: 50%;
-    display: inline-block;
-    height: 80px;
-}
+
 .ship_code {
-    width: 98%;
+    width: 99%;
     height: 5.556%;
     margin: 0 auto;
     border-bottom: 3px solid #333;
@@ -467,7 +465,7 @@ ul li {
     font-size: 22px;
 }
 .revicesPr_time {
-    width: 98%;
+    width: 99%;
     height: 8.333%;
     margin: 0 auto;
     border-bottom: 3px solid #333;
@@ -484,8 +482,8 @@ ul li {
 }
 
 .involveOrader {
-    width: 98%;
-    height: 16.222%;
+    width: 99%;
+    height: 14.222%;
     margin: 0 auto;
     border-bottom: 3px solid #333;
 }
@@ -510,7 +508,7 @@ ul li {
     display: block;
 }
 .order_bottom {
-    width: 98%;
+    width: 99%;
     height: 16.667%;
     margin: 0 auto;
     border-bottom: 3px solid #333;

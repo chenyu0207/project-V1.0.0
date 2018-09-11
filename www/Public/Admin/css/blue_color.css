@@ -381,9 +381,9 @@ select {
 }
 
 /* 顶部右侧 用户bar */
-.header .user-bar .user-entrance {
+/* .header .user-bar .user-entrance {
     background: url(../images/haori-logo-index.png) no-repeat -150px 0;
-}
+} */
 .header .user-menu {
     border-color: #ddd;
     background-color: #fff;

@@ -104,7 +104,8 @@ class ProjectController extends AdminController
         if ($_FILES) {
             $data = $this->excelto();
             if (!empty($data)) {
-                $this->getPdf($data);
+                // 直接打印pdf
+                // $this->getPdf($data);
                 $this->assign('data', $data);
             } else {
                 $this->assign('data', false);
@@ -223,8 +224,10 @@ class ProjectController extends AdminController
 
     public function upJson()
     {
-        $data = json_decode($_POST['json'], true);
+        
+        $data = json_decode($_POST['json']);
         $this->getPdf($data);
+        
     }
 
     public function getPdf($data)
@@ -233,15 +236,17 @@ class ProjectController extends AdminController
         require_once ORIGIN_PATH . '/vendor/autoload.php';
         $mpdf = new \Mpdf\Mpdf(
             [
-                ' margin_left '  =>  20,
-                ' margin_right '  =>  15,
-                ' margin_top '  =>  25,
-                ' margin_bottom '  =>  25,
-                ' margin_header '  =>  10,
-                ' margin_footer '  =>  10,
+                ' margin_left '  =>  0,
+                ' margin_right '  =>  0,
+                ' margin_top '  =>  0,
+                ' margin_bottom '  =>  0,
+                ' margin_header '  =>  0,
+                ' margin_footer '  =>  0,
                 ' showBarcodeNumbers '  =>  true
             ]
         );
+        echo $data;
+        $mpdf->SetDisplayMode('fullpage');
         $mpdf->autoScriptToLang = true;
         $mpdf->autoLangToFont = true;
         $main_css = file_get_contents(ORIGIN_PATH . '/Public/Admin/css/main.css');
@@ -252,7 +257,8 @@ class ProjectController extends AdminController
             $mpdf->WriteHTML($html, 2);
             // $mpdf->AddPage();
         }
-        $mpdf->Output('hello.pdf', 'D');
+        
+        $mpdf->Output('Order_List.pdf', 'D');
         exit;
     }
 }
