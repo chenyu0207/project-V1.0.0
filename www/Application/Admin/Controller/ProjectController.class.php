@@ -41,8 +41,18 @@ class ProjectController extends AdminController
      */
     public function listIndex()
     {
-        $info =  M('simple')->order('id desc')->select();
+        $page = I('p');
+        $page = $page ? $page : 1; //默认显示第一页数据
+        $row = 3;
+        $info =  M('simple')->order('id desc')->page($page, $row)->select();
         $this->assign('data', $info);
+        $count = M('simple')->count();
+        //分页
+        if($count > $row){
+            $page = new \COM\Page($count, $row);
+            $page->setConfig('theme','%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
+            $this->assign('_page', $page->show());
+        }
         $this->display('list');
     }
 
