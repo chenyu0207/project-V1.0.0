@@ -13,9 +13,10 @@
                 <input type="submit" class="btn" value="导入"/>
             </form>
             <!-- 生成pdf面单 -->
-            <!-- <form action="{:U('Project/upJson')}" method="post" > -->
-                <input class="btn" type="button" value="生成PDF面单" id="downPDF"/>
-            <!-- </form> -->
+             <form action="{:U('Project/excel')}" method="post" >
+                 <input type="hidden" id="upJson" name="upJson" value=""/>
+                 <input class="btn" type="submit" value="生成PDF面单" id="downPDF"/>
+             </form>
             
         </div>
 
@@ -118,19 +119,20 @@
                 // console.log(arr);
                 json[e] = arr;
             });
-            console.log(json);
-            $.ajax({
-                type: "post",
-                dataType: "json",
-                url:  "{:U('Project/upJson')}",
-                data: {
-                    "json": json, 
-                    "status": 200
-                },
-                success: function (res) {
-                    console.log(res);
-                }
-            })
+            var thisData = JSON.stringify(json);
+            $("#upJson").val(thisData);
+            //            $.ajax({
+//                type: "post",
+//                dataType: "json",
+//                url:  "{:U('Project/upJson')}",
+//                data: {
+//                    "json": json,
+//                    "status": 200
+//                },
+//                success: function (res) {
+//                    console.log(res);
+//                }
+//            })
         })
 
         // $("#downPDF").on('click', function(){

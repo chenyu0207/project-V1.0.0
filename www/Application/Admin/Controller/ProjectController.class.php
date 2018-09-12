@@ -101,17 +101,21 @@ class ProjectController extends AdminController
      */
     public function excel()
     {
+        if ($_POST['upJson']) {
+            $data = json_decode($_POST['upJson'], true);
+            $projectLogic = D('Project', 'Logic');
+            $status = $projectLogic->prossingSql($data);
+            $this->getPdf($data);
+        }
         if ($_FILES) {
             $data = $this->excelto();
             if (!empty($data)) {
-                // 直接打印pdf
-                // $this->getPdf($data);
                 $this->assign('data', $data);
             } else {
                 $this->assign('data', false);
             }
-            // var_dump($data);
         }
+
         $this->display();
     }
     /**
@@ -222,17 +226,14 @@ class ProjectController extends AdminController
         }
     }
 
-    public function upJson()
-    {
-        
-        $data = json_decode($_POST['json']);
-        $this->getPdf($data);
-        
-    }
 
+    /**
+     * 下载生成pdf
+     * @param $data
+     */
     public function getPdf($data)
     {
-        //引入PHPExcel类
+        //引入mpdf类
         require_once ORIGIN_PATH . '/vendor/autoload.php';
         $mpdf = new \Mpdf\Mpdf(
             [
@@ -255,9 +256,7 @@ class ProjectController extends AdminController
             $html = $this->fetch('pdf_temp');
             $mpdf->WriteHTML($main_css, 1);
             $mpdf->WriteHTML($html, 2);
-            // $mpdf->AddPage();
         }
-        
         $mpdf->Output('Order_List.pdf', 'D');
         exit;
     }

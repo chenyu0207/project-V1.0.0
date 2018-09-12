@@ -14,10 +14,63 @@ class ProjectLogic{
 
     public function prossingSql($param)
     {
-            print_r($param);
-
+        if ($param) {
+            foreach ($param as $k => $v) {
+                $where = $this->selWhere($v);
+                $sql = "SELECT * FROM pro_simple WHERE " . $where;
+                echo $sql;
+                $data = M()->query($sql);
+                if (!$data) {
+                    $sql = $this->insert('pro_simple', $v);
+                    $data = M('simple')->execute($sql);
+                }
+            }
+            $status = 1;
+        } else {
+            $status = 0;
+        }
+        return $status;
     }
 
+    /**
+     * 判断where语句
+     * @param $data
+     * @return bool|string
+     */
+    public function selWhere($data)
+    {
+        foreach ($data as $k => $v) {
+            $where[] = "`" . $k . "`" . "='" . $v . "'";
+        }
+        if ($where) {
+            $str = implode(" AND ", $where);
+            return $str;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * insert转换.
+     * @param $db_name $wheres
+     */
+    public function insert($db_name, $wheres)
+    {
+        $where = $this->replace($wheres);
+        $sql = "INSERT INTO " . $db_name . " (" . '`' . implode('`,`', array_keys($where)) . '`' . ") VALUES ('" . implode("','", $where) . "')";
+        return $sql;
+    }
+
+    /**
+     *
+     */
+    public function replace($node)
+    {
+        foreach ($node as $k => $v) {
+            $node[$k] = preg_replace("/[\']+/", "''", $v);
+        }
+        return $node;
+    }
 
     //导入函数
     /*
