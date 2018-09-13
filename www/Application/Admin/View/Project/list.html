@@ -6,10 +6,6 @@
         <h2>物流历史记录</h2>
     </div>
     <div class="cf">
-        <!--<div class="fl">-->
-            <!--<input class="btn" type="button" value="发布" id="downPDF"/>-->
-        <!--</div>-->
-
         <!-- 高级搜索 -->
         <div class="search-form fr cf">
             <div class="sleft">
@@ -91,7 +87,6 @@
         });
 
         $("#downPDF").on('click', function(){
-            console.log('111111');
             var arr = [];
             var data = [];
             $("input[type='checkbox']:checked").each(function(e){
@@ -110,8 +105,6 @@
                 data.push(arr);
 
             });
-
-            console.log(data);
         });
         //回车搜索
         $(".search-input").keyup(function(e){
