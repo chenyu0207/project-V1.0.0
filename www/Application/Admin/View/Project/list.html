@@ -10,13 +10,14 @@
             <!--<input class="btn" type="button" value="发布" id="downPDF"/>-->
         <!--</div>-->
 
-        <!--&lt;!&ndash; 高级搜索 &ndash;&gt;-->
-        <!--<div class="search-form fr cf">-->
-            <!--<div class="sleft">-->
-                <!--<input type="text" name="logId" class="search-input" value="{:I('logId')}" placeholder="请输入配置名称">-->
-                <!--<a class="sch-btn" href="javascript:;" id="search" url="{:U('index')}"><i class="btn-search"></i></a>-->
-            <!--</div>-->
-        <!--</div>-->
+        <!-- 高级搜索 -->
+        <div class="search-form fr cf">
+            <div class="sleft">
+                <!-- 生成pdf面单 -->
+                <input type="text" name="waybill_number" class="search-input" value="{:I('waybill_number')}" placeholder="请输入运单编号">
+                <a class="sch-btn" href="javascript:;" id="search" url="{:U('listIndex')}"><i class="btn-search"></i></a>
+            </div>
+        </div>
     </div>
     <!-- 数据列表 -->
     <div class="data-table table-striped">
@@ -120,6 +121,6 @@
             }
         });
         //导航高亮
-        $('.side-sub-menu').find('a[href="{:U('User/index')}"]').closest('li').addClass('current');
+        $('.side-sub-menu').find('a[href="{:U('Project/listIndex')}"]').closest('li').addClass('current');
     </script>
 </block>

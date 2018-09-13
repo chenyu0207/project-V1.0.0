@@ -44,13 +44,18 @@ class ProjectController extends AdminController
         $page = I('p');
         $page = $page ? $page : 1; //默认显示第一页数据
         $row = 3;
-        $info =  M('simple')->order('id desc')->page($page, $row)->select();
+        if ($_GET['waybill_number']) {
+            $info =  M('simple')->where($_GET)->order('id desc')->page($page, $row)->select();
+            $count = M('simple')->where($_GET)->count();
+        } else {
+            $info =  M('simple')->order('id desc')->page($page, $row)->select();
+            $count = M('simple')->count();
+        }
         $this->assign('data', $info);
-        $count = M('simple')->count();
         //分页
-        if($count > $row){
+        if ($count > $row) {
             $page = new \COM\Page($count, $row);
-            $page->setConfig('theme','%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
+            $page->setConfig('theme', '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% %HEADER%');
             $this->assign('_page', $page->show());
         }
         $this->display('list');

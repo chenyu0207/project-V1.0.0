@@ -33,7 +33,7 @@
 
         <!-- 用户栏 -->
         <div class="user-bar">
-            <a href="javascript:;" class="user-entrance">退 出<i class="icon-user"></i></a>
+            <a href="javascript:;" class="user-entrance"><i class="icon-user"></i></a>
             <ul class="nav-list user-menu hidden">
                 <li class="manager">你好，<em title="{:session('user_auth.username')}">{:session('user_auth.username')}</em></li>
                 <li><a href="{:U('User/updatePassword')}">修改密码</a></li>
@@ -45,9 +45,7 @@
 
     <!-- 主体 -->
     <div id="indexMain" class="index-main">
-        <img src="http://dpic.tiankong.com/8n/m1/QJ8175168993.jpg?x-oss-process=style/670w" style="width: 100%">
-       <!-- 插件块 -->
-       <!--<div class="container-span">{:hook('AdminIndex')}</div>-->
+
     </div>
 
     <!-- 底部版权 -->
