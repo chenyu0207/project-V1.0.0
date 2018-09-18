@@ -21,7 +21,7 @@ return array(
     'DATA_AUTH_KEY' => '2Bjm%Q_c6K|>J<`IkU/NwvCr&DFAM=8@E-h:3}9x', //默认数据加密KEY
 
     /* 调试配置 */
-    'SHOW_PAGE_TRACE' => true,
+    'SHOW_PAGE_TRACE' => false,
 
     /* 用户相关设置 */
     'USER_MAX_CACHE'     => 1000, //最大缓存用户数
