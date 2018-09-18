@@ -43,7 +43,7 @@ class ProjectController extends AdminController
     {
         $page = I('p');
         $page = $page ? $page : 1; //默认显示第一页数据
-        $row = 3;
+        $row = 50;
         if ($_GET['waybill_number']) {
             $info =  M('simple')->where($_GET)->order('id desc')->page($page, $row)->select();
             $count = M('simple')->where($_GET)->count();
