@@ -13,7 +13,7 @@
                 <input type="submit" class="btn" value="导入"/>
             </form>
             <!-- 生成pdf面单 -->
-             <form action="{:U('Project/excel')}" method="post" >
+             <form action="{:U('Project/excel')}" method="post" action="download">
                  <input type="hidden" id="upJson" name="upJson" value=""/>
                  <input class="btn" type="submit" value="生成PDF面单" id="downPDF"/>
              </form>

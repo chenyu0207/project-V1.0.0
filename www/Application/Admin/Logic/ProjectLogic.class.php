@@ -18,7 +18,6 @@ class ProjectLogic{
             foreach ($param as $k => $v) {
                 $where = $this->selWhere($v);
                 $sql = "SELECT * FROM pro_simple WHERE " . $where;
-                echo $sql;
                 $data = M()->query($sql);
                 if (!$data) {
                     $sql = $this->insert('pro_simple', $v);
