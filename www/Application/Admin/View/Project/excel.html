@@ -38,15 +38,18 @@
                 <th class="">寄件人电话</th>
                 <th class="">寄件公司</th>
                 <th class="">寄件人地址</th>
+                <th class="">原寄地</th>
                 <th class="">日期</th>
                 <th class="">收件人</th>
                 <th class="">收件人电话</th>
                 <th class="">收件人地址</th>
+                <th class="">收件人邮编</th>
                 <th class="">运单编号</th>
                 <th class="">关联单号</th>
+                <th class="">实际重量</th>
                 <th class="">内容描述</th>
 
-                <!-- <th class="">操作</th> -->
+                <!--<th class="">操作</th>-->
             </tr>
             </thead>
             <tbody>
@@ -56,18 +59,21 @@
                     <td class="sender_phone" name="sender_phone">{$vo.sender_phone}</td>
                     <td class="sender_company" name="sender_company">{$vo.sender_company}</td>
                     <td class="sender_address" name="sender_address">{$vo.sender_address}</td>
+                    <td class="origin_place" name="origin_place">{$vo.origin_place}</td>
                     <td class="date" name="date">{$vo.date} </td>
                     <td class="addressee_name" name="addressee_name">{$vo.addressee_name}</td>
                     <td class="addressee_phone" name="addressee_phone">{$vo.addressee_phone}</td>
                     <td class="addressee_address" name="addressee_address">{$vo.addressee_address}</td>
+                    <td class="receive_zip_code" name="receive_zip_code">{$vo.receive_zip_code}</td>
                     <td class="waybill_number" name="waybill_number">{$vo.waybill_number} </td>
                     <td class="associated_number" name="associated_number">{$vo.associated_number}</td>
+                    <td class="actual_weight" name="actual_weight">{$vo.actual_weight}</td>
                     <td class="desc" name="desc">{$vo.desc}</td>
-                    <!-- <td>
-                        <a href="{:U('Project/update?id='.$vo['id'])}" >更新状态</a>
+                    <!--<td>-->
+                        <!--<a href="{:U('Project/update?id='.$vo['id'])}" >更新状态</a>-->
 
-                        <a href="{:U('Project/del?id='.$vo['id'])}" class="confirm ajax-get">删除</a>
-                    </td> -->
+                        <!--<a href="{:U('Project/del?id='.$vo['id'])}" class="confirm ajax-get">删除</a>-->
+                    <!--</td>-->
                 </tr>
             </volist>
             </tbody>
