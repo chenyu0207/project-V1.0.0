@@ -447,7 +447,7 @@ ul li {
     width: 99%;
     height: 10.222%;
     margin: 0 auto;
-    border-bottom: 3px solid #333;
+    /* border-bottom: 3px solid #333; */
 }
 
 .ship_code {

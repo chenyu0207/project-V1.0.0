@@ -46,7 +46,7 @@
                 <th class="">关联单号</th>
                 <th class="">内容描述</th>
 
-                <th class="">操作</th>
+                <!-- <th class="">操作</th> -->
             </tr>
             </thead>
             <tbody>
@@ -63,11 +63,11 @@
                     <td class="waybill_number" name="waybill_number">{$vo.waybill_number} </td>
                     <td class="associated_number" name="associated_number">{$vo.associated_number}</td>
                     <td class="desc" name="desc">{$vo.desc}</td>
-                    <td>
+                    <!-- <td>
                         <a href="{:U('Project/update?id='.$vo['id'])}" >更新状态</a>
 
                         <a href="{:U('Project/del?id='.$vo['id'])}" class="confirm ajax-get">删除</a>
-                    </td>
+                    </td> -->
                 </tr>
             </volist>
             </tbody>

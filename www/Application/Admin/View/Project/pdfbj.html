@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <!-- <link rel="stylesheet" href="__CSS__/normalize.css"> -->
+    <link rel="stylesheet" href="__CSS__/main.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 头 -->
+        <div class="top">
+            <table style="width: 100%;height: 100%;">
+                <tr>
+                    <td style="width: 10%;">
+                        <img src="__PUBLIC__/Admin/images/china_express_logo.png" alt="haori" class="logo">
+                    </td>
+                    <td style="width: 50%;height: 20%;">
+                        <!-- 条形码 -->
+                        <!-- <barcode size="1" height="2.2" code="{$data.waybill_number}" type="C128A" class="barcode" /> -->
+                        <img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=5800ef19a61ea8d39e2f7c56f6635b2b/1ad5ad6eddc451daea315449b6fd5266d1163248.jpg" alt="" style="height: 8%;float: right;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 快递详情 -->
+        <div class="md_info">
+            <div class="md_info_top">
+                <table width="100%">
+                    <tr>
+                        <td width="100">寄件人：</td>
+                        <!-- <td>{$data.sender_name}</td> -->
+                        <td>Lin Guan</td>
+                        <td width="100">电话：</td>
+                        <!-- <td>{$data.sender_phone}</td> -->
+                        <td>801-336-8702</td>
+                    </tr>
+                    <tr>
+                        <td width="100">寄件人地址：</td>
+                        <!-- <td>{$data.sender_address}</td> -->
+                        <td>6552 S Alfred Circle, Murray, UT, 84123</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="md_info_bottom">
+                <!-- <div class="md_info_b_left">
+                    <span>送达地址</span>
+                </div> -->
+                <table style="width: 100%;padding: 10px;">
+                    <tr>
+                        <td rowspan="3" style="font-size: 24px;padding-left: 30px;padding-right:20px;" width="110">送达地址</td>
+                        <td style="width: 100px;">收件人：</td>
+                        <td>{$data.addressee_name}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 100px;">收件人电话：</td>
+                        <td>{$data.addressee_phone}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 100px;">收件人地址：</td>
+                        <td>{$data.addressee_address}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 条形码 -->
+        <div class="barcode_area">
+            <table style="width: 100%;text-align: center;">
+                <tr>
+                    <!-- <td align="center">C128A</td> -->
+                    <!-- <td>CODE 128 A. Valid characters: [A-Z uppercase and control chars ASCII 0-31]. Checksum digit: automatic.</td> -->
+                    <td class="barcodecell" >
+                        <barcode size="1" height="2.2" code="{$data.waybill_number}" type="C128A" class="barcode" />
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+
+        <!-- 运单编号 -->
+        <div class="ship_code">
+            <table style="width: 100%;height: 100%;padding: 10px;">
+                <tr style="height: 100%;">
+                    <td style="font-size: 22px;">运单编号：</td>
+                    <td style="font-size: 22px;">{$data.waybill_number}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 收件人签字/日期 -->
+        <div class="revicesPr_time">
+            <table width="100%" style="padding: 20px 0 20px 10px;height: 100%;">
+                <tr height="100%" style="line-height: 100%;">
+                    <td align="left" style="font-size: 18px;">收件人/代签人：</td>
+                    <td align="center" style="font-size: 18px;">签单日期：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;日</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 关联单号 -->
+        <div class="involveOrader">
+            <table width="100%" style="padding: 10px;">
+                <tr>
+                    <td style="font-size: 22px;width: 130px;">关联单号：</td>
+                    <td>{$data.associated_number}</td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 50px;font-size: 20px;padding-right: 30px;">{$data.waybill_number}</td>
+                    <td style="padding-top: 20px;">
+                        <barcode size="1" height="1.5" code="{$data.waybill_number}" type="C128A" class="barcode" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 底部订单详情/内件描述 -->
+        <div class="order_bottom">
+            <div class="o_b_left">
+                <table class="ob_left_table">
+                    <tr>
+                        <td class="ob_table_td">寄件人：</td>
+                        <td class="ob_table_val">{$data.sender_name}</td>
+                    </tr>
+                    <tr>
+                        <td class="ob_table_td">寄件人电话：</td>
+                        <td class="ob_table_val">{$data.sender_phone}</td>
+                    </tr>
+                    <tr>
+                        <td class="ob_table_td">寄件人地址：</td>
+                        <td class="ob_table_val">{$data.sender_address}</td>
+                    </tr>
+                    <tr>
+                        <td class="ob_table_td">收件人：</td>
+                        <td class="ob_table_val">{$data.addressee_name}</td>
+                    </tr>
+                    <tr>
+                        <td class="ob_table_td">收件人电话：</td>
+                        <td class="ob_table_val">{$data.addressee_phone}</td>
+                    </tr>
+                    <tr>
+                        <td class="ob_table_td">收件人地址：</td>
+                        <td class="ob_table_val">{$data.addressee_address}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="o_b_right">
+                <span>内件描述：</span>
+                <p>{$data.desc}</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
