@@ -45,7 +45,7 @@
                 <th class="">收件人地址</th>
                 <th class="">收件人邮编</th>
                 <th class="">运单编号</th>
-                <th class="">关联单号</th>
+                <!-- <th class="">关联单号</th> -->
                 <th class="">实际重量</th>
                 <th class="">内容描述</th>
 
@@ -55,7 +55,7 @@
             <tbody>
             <volist name="data" id="vo">
                 <tr class="data_tr">
-                    <td class="sender_name" name="sender_name">{$vo.sender_name} </td>
+                    <td class="sender_name" name="sender_name">{$vo.sender_name}</td>
                     <td class="sender_phone" name="sender_phone">{$vo.sender_phone}</td>
                     <td class="sender_company" name="sender_company">{$vo.sender_company}</td>
                     <td class="sender_address" name="sender_address">{$vo.sender_address}</td>
@@ -66,7 +66,7 @@
                     <td class="addressee_address" name="addressee_address">{$vo.addressee_address}</td>
                     <td class="receive_zip_code" name="receive_zip_code">{$vo.receive_zip_code}</td>
                     <td class="waybill_number" name="waybill_number">{$vo.waybill_number} </td>
-                    <td class="associated_number" name="associated_number">{$vo.associated_number}</td>
+                    <!-- <td class="associated_number" name="associated_number">{$vo.associated_number}</td> -->
                     <td class="actual_weight" name="actual_weight">{$vo.actual_weight}</td>
                     <td class="desc" name="desc">{$vo.desc}</td>
                     <!--<td>-->
@@ -115,12 +115,15 @@
                 arr['sender_phone'] = $(this).children('td.sender_phone').text()
                 arr['sender_company'] = $(this).children('td.sender_company').text()
                 arr['sender_address'] = $(this).children('td.sender_address').text()
+                arr['origin_place'] = $(this).children('td.origin_place').text()
                 arr['date'] = $(this).children('td.date').text()
                 arr['addressee_name'] = $(this).children('td.addressee_name').text()
                 arr['addressee_phone'] = $(this).children('td.addressee_phone').text()
                 arr['addressee_address'] = $(this).children('td.addressee_address').text()
+                arr['receive_zip_code'] = $(this).children('td.receive_zip_code').text()
                 arr['waybill_number'] = $(this).children('td.waybill_number').text()
-                arr['associated_number'] = $(this).children('td.associated_number').text()
+                // arr['associated_number'] = $(this).children('td.associated_number').text()
+                arr['actual_weight'] = $(this).children('td.actual_weight').text()
                 arr['desc'] = $(this).children('td.desc').text()
                 // console.log(arr);
                 json[e] = arr;

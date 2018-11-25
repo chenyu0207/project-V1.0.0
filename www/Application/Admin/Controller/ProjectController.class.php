@@ -275,11 +275,11 @@ class ProjectController extends AdminController
         $main_css = file_get_contents(ORIGIN_PATH . '/Public/Admin/css/main.css');
         foreach ($data as $k => $v) {
             $this->assign('data', $v);
-            $html = $this->fetch('pdf_temp');
+            $html = $this->fetch('pdfbj');
             $mpdf->WriteHTML($main_css, 1);
             $mpdf->WriteHTML($html, 2);
         }
-        $mpdf->Output('Order_List.pdf', 'D');
+        $mpdf->Output('Order_List_BJ.pdf', 'D');
         exit;
     }
 }

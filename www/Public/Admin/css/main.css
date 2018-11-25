@@ -400,7 +400,7 @@ ul li {
 /* 快递信息 */
 .md_info {
     width: 99%;
-    height: 22.889%;
+    /* height: 22.889%; */
     margin: 0 auto;
     border-bottom: 3px solid #333;
 }
@@ -541,4 +541,16 @@ ul li {
 .o_b_right span{
     display: block;
     font-size: 20px;
+}
+
+/* 新模板 */
+.pdf-bj-tmp-table{
+    width: 100%;
+}
+.pdf-bj-tmp-table tr{
+    height: 40px;
+    /* line-height: 30px; */
+}
+.pdf-bj-tmp-table tr td.td-bold{
+    font-weight: bold;
 }
