@@ -16,6 +16,7 @@ class ProjectLogic{
     {
         if ($param) {
             foreach ($param as $k => $v) {
+                unset($v['consignee_address']);
                 $where = $this->selWhere($v);
                 $sql = "SELECT * FROM pro_simple WHERE " . $where;
                 $data = M()->query($sql);
@@ -30,6 +31,25 @@ class ProjectLogic{
         }
         return $status;
     }
+
+    public function getSourceSite($param)
+    {
+        $source = [
+            '.' => ['北京'],
+            'B' => ['河北', '天津', '甘肃', '宁夏', '西藏', '新疆', '青海'],
+        ];
+        foreach ($param as $k => $v) {
+            if (in_array($v['consignee_address'], $source['.'])) {
+                $param[$k]['addressee_id'] = '.';
+            } elseif (in_array($v['consignee_address'], $source['B'])) {
+                $param[$k]['addressee_id'] = 'B';
+            } else {
+                $param[$k]['addressee_id'] = 'J';
+            }
+        }
+        return $param;
+    }
+
 
     /**
      * 判断where语句

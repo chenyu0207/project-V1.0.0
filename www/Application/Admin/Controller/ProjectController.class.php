@@ -120,6 +120,7 @@ class ProjectController extends AdminController
             $data = json_decode($_POST['upJson'], true);
             $projectLogic = D('Project', 'Logic');
             $status = $projectLogic->prossingSql($data);
+            $data = $projectLogic->getSourceSite($data);
             $this->getPdf($data);
         }
         if ($_FILES) {
@@ -228,6 +229,10 @@ class ProjectController extends AdminController
                             //获取M列的值
                             $rsv['desc'] = $PHPExcel->getActiveSheet()->getCell("M" . $currentRow)->getValue();
                             if (is_object($rsv['desc'])) $rsv['desc'] = $rsv['desc']->__toString();
+
+                            //获取N列的值
+                            $rsv['consignee_address'] = $PHPExcel->getActiveSheet()->getCell("N" . $currentRow)->getValue();
+                            if (is_object($rsv['consignee_address'])) $rsv['consignee_address'] = $rsv['consignee_address']->__toString();
                             if ($rsv['sender_name'] != "") {
                                 $data[] = $rsv;
                                 unset($rsv);
