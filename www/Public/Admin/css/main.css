@@ -554,3 +554,7 @@ ul li {
 .pdf-bj-tmp-table tr td.td-bold{
     font-weight: bold;
 }
+.pdf-bj-tmp-table tr.border-b{
+    border-bottom: 3px solid #333;
+    display: block;
+}
