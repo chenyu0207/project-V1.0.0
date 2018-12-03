@@ -365,7 +365,7 @@ ul li {
 }
 /* css3打印设置选项 */
 @page{
-    margin: 10pt;
+    margin: 0;
 }
 .top {
     width: 99%;
@@ -546,10 +546,17 @@ ul li {
 /* 新模板 */
 .pdf-bj-tmp-table{
     width: 100%;
+    border-collapse: collapse;
 }
 .pdf-bj-tmp-table tr{
     height: 40px;
     /* line-height: 30px; */
+    
+}
+.pdf-bj-tmp-table tr td{
+    border: 2px solid #333;
+    font-size: 22px;
+    padding: .3rem;
 }
 .pdf-bj-tmp-table tr td.td-bold{
     font-weight: bold;
@@ -557,4 +564,8 @@ ul li {
 .pdf-bj-tmp-table tr.border-b{
     border-bottom: 3px solid #333;
     display: block;
+}
+.barcode{
+    padding: 0;
+    margin: 0;
 }

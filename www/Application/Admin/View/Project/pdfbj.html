@@ -19,9 +19,9 @@
                     <td width="70%">
                         <img src="__PUBLIC__/Admin/images/china_express_logo.png" alt="haori" class="logo">
                     </td>
-                    <td width="30%">
+                    <td width="50%">
                         <!-- 条形码 -->
-                        <barcode size="1" height="2" code="{$data.waybill_number}" type="C93" class="barcode" style="display: block;"/>
+                        <barcode size="1" height="2" code="{$data.waybill_number}" type="C128A" class="barcode" style="display: block;"/>
                         <div style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$data.waybill_number}</div>
                         <!-- <img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=5800ef19a61ea8d39e2f7c56f6635b2b/1ad5ad6eddc451daea315449b6fd5266d1163248.jpg"
                             alt="" style="height: 8%;float: right;"> -->
@@ -35,108 +35,112 @@
             <div class="md_info_top">
                 <table width="100%" class="pdf-bj-tmp-table">
                     <tr>
-                        <td class="td-bold" width="10%" height="30">寄件人: </td>
+                        <td class="" width="10%" height="30">寄件人: </td>
                         <td>{$data.sender_name}</td>
                         <!-- <td width="40%">Lin Guan</td> -->
-                        <td class="td-bold" width="10%">电话: </td>
+                        <td class="" width="15%">电话: </td>
                         <td>{$data.sender_phone}</td>
                         <!-- <td>801-336-8702</td> -->
                     </tr>
                     <tr>
-                        <td class="td-bold" width="20%" height="30">地址: </td>
-                        <td colspan="3">{$data.sender_address}</td>
+                        <td class="" width="20%" height="30">地址: </td>
+                        <td colspan="3" >{$data.sender_address}</td>
                         <!-- <td colspan="3">6552 S Alfred Circle, Murray, UT, 84123</td> -->
                     </tr>
                     <tr>
-                        <td class="td-bold" width="20%" height="30">收件人: </td>
+                        <td class="" width="20%" height="30">收件人: </td>
                         <td>{$data.addressee_name}</td>
                         <!-- <td width="40%">王瑶</td> -->
-                        <td class="td-bold" width="80">电话: </td>
+                        <td>电话: </td>
                         <td>{$data.addressee_phone}</td>
                         <!-- <td>13800138000</td> -->
                     </tr>
                     <tr>
-                        <td class="td-bold" width="20%" height="30">地址: </td>
+                        <td class="" width="20%" height="30">地址: </td>
                         <td colspan="3">{$data.addressee_address}</td>
                         <!-- <td colspan="3">北京市东城区豆腐池胡同16号</td> -->
                     </tr>
                     <tr>
-                        <td class="td-bold" width="25%" height="30">大客户编码: </td>
+                        <td class="" width="25%" height="30">大客户编码: </td>
                         <td>95407</td>
-                        <td class="td-bold">邮编: </td>
+                        <td class="">邮编: </td>
                         <td>{$data.receive_zip_code}</td>
                         <!-- <td>100000</td> -->
                     </tr>
                     <tr>
-                        <td class="td-bold" colspan="2" height="30">内件描述: </td>
-                        <td class="td-bold">实际重量: </td>
+                        <td class="" colspan="2" height="30">内件描述: </td>
+                        <td class="">实际重量: </td>
                         <!-- <td>4 kg</td> -->
                         <td>{$data.actual_weight}&nbsp;&nbsp;kg</td>
                     </tr>
                     <tr>
                         <!-- <td colspan="2" rowspan="2">童装</td> -->
                         <td colspan="2" rowspan="2" height="60">{$data.desc}</td>
-                        <td class="td-bold">体积重量: </td>
+                        <td class="">体积重量: </td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;kg</td>
 
                     </tr>
                     <tr>
-                        <td colspan="2" class="td-bold" height="30">长/L:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm&nbsp;&nbsp;宽/W:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm&nbsp;&nbsp;高/H:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm</td>
+                        <td colspan="2" class="" height="30">长/L:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm&nbsp;&nbsp;宽/W:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm&nbsp;&nbsp;高/H:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm</td>
                     </tr>
                     <tr>
-                        <td class="td-bold" colspan="2" height="30">申报价值: </td>
-                        <td class="td-bold" colspan="2" height="30">原产地: {$data.origin_place}</td>
+                        <td class="" colspan="2" height="30">申报价值: </td>
+                        <td class="" colspan="2" height="30">原产地: {$data.origin_place}</td>
                     </tr>
                     <tr>
-                        <td class="td-bold" colspan="2" height="30">收件人签名: </td>
-                        <td class="td-bold" colspan="2" height="30">签收时间: </td>
+                        <td class="" colspan="2" height="30">收件人签名: </td>
+                        <td class="" colspan="2" height="30">签收时间: </td>
                     </tr>
                     <tr>
-                        <td class="td-bold" width="20%" height="30">寄件人: </td>
+                        <td class="" width="20%" height="30">寄件人: </td>
                         <td>{$data.sender_name}</td>
                         <!-- <td width="40%">Lin Guan</td> -->
-                        <td class="td-bold" width="10%" height="30">电话: </td>
+                        <td class="" width="10%" height="30">电话: </td>
                         <td>{$data.sender_phone}</td>
                         <!-- <td>801-336-8702</td> -->
                     </tr>
                     <tr>
-                        <td class="td-bold" width="20%" height="30">地址: </td>
+                        <td class="" width="20%" height="30">地址: </td>
                         <td colspan="3">{$data.sender_address}</td>
                         <!-- <td colspan="3">6552 S Alfred Circle, Murray, UT, 84123</td> -->
                     </tr>
                     <tr>
-                        <td class="td-bold" width="20%" height="30">收件人: </td>
+                        <td class="" width="20%" height="30">收件人: </td>
                         <td>{$data.addressee_name}</td>
                         <!-- <td width="40%">王瑶</td> -->
-                        <td class="td-bold" width="80" height="30">电话: </td>
+                        <td class="" width="80" height="30">电话: </td>
                         <td>{$data.addressee_phone}</td>
                         <!-- <td>13800138000</td> -->
                     </tr>
                     <tr>
-                        <td class="td-bold" width="20%" height="30">地址: </td>
+                        <td class="" width="20%" height="30">地址: </td>
                         <td colspan="3">{$data.addressee_address}</td>
                         <!-- <td colspan="3">北京市东城区豆腐池胡同16号</td> -->
                     </tr>
                     <tr>
                         <td class="barcodecell" colspan="2">
-                            <barcode size="1" height="2.2" code="{$data.waybill_number}" type="	C93" class="barcode" />
-                            <div style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$data.waybill_number}</div>
+                            <barcode size="1.2" height="2.2" code="{$data.waybill_number}" type="C128A" class="barcode" />
+                            <p style="font-size: 22px;text-align: center;">{$data.waybill_number}</p>
                         </td>
-                        <td colspan="2" class="td-bold" style="font-size: 18px">
-                            <span style="font-size: 26px;">{$data.addressee_id}</span>&nbsp;&nbsp;&nbsp;&nbsp;全程陆运&nbsp;&nbsp;禁航
+                        <td colspan="2">
+                            <p style="font-size: 50px;padding-left: 50px;">&nbsp;&nbsp;&nbsp;&nbsp;{$data.addressee_id}</p>
+                            <p style="font-size: 24px;margin-left: 20px;">&nbsp;&nbsp;&nbsp;全程陆运&nbsp;&nbsp;&nbsp;&nbsp;禁航</p>
+                            
                         </td>
                     </tr>
                     <tr>
-                        <td class="td-bold" height="30">进口口岸: </td>
-                        <td class="td-bold">北京</td>
-                        <td class="td-bold">原寄地: </td>
+                        <td class="" height="30">进口口岸: </td>
+                        <td class="">北京</td>
+                        <td class="">原寄地: </td>
                         <!-- <td>美国</td> -->
                         <td>{$data.origin_place}</td>
                     </tr>
                     <tr>
-                        <td class="td-bold" height="30">客服电话: </td>
+                        <td class="" height="30">客服电话: </td>
                         <td>11183</td>
-                        <td class="td-bold" colspan="2">北京进口商品快件中心&nbsp;&nbsp;&nbsp;&nbsp;验视人: 李珊珊</td>
+                        <td class="" colspan="2">
+                           <p>北京进口商品快件中心</p><p>验视人: 李珊珊</p>
+                        </td>
                     </tr>
 
 

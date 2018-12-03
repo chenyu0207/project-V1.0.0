@@ -274,7 +274,7 @@ class ProjectController extends AdminController
                 'showBarcodeNumbers'  =>  true
             ]
         );
-        echo $data;
+        //echo $data;
         $mpdf->SetDisplayMode('fullpage');
         $mpdf->autoScriptToLang = true;
         $mpdf->autoLangToFont = true;
