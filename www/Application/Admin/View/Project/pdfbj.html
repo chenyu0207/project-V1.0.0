@@ -21,8 +21,13 @@
                     </td>
                     <td width="50%">
                         <!-- 条形码 -->
-                        <barcode size="1" height="2" code="{$data.waybill_number}" type="C128A" class="barcode" style="display: block;"/>
-                        <div style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$data.waybill_number}</div>
+                        <div style="display: inline-block">
+                            <span style="display: inline-block;">*</span>
+                            <barcode size="1.5" height="2" code="{$data.waybill_number}" type="C93" class="barcode" style="display: block;"/>
+                            <span>*</span>
+                            <div style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$data.waybill_number}</div>
+                        </div>
+                        
                         <!-- <img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=5800ef19a61ea8d39e2f7c56f6635b2b/1ad5ad6eddc451daea315449b6fd5266d1163248.jpg"
                             alt="" style="height: 8%;float: right;"> -->
                     </td>
@@ -118,8 +123,8 @@
                         <!-- <td colspan="3">北京市东城区豆腐池胡同16号</td> -->
                     </tr>
                     <tr>
-                        <td class="barcodecell" colspan="2">
-                            <barcode size="1.2" height="2.2" code="{$data.waybill_number}" type="C128A" class="barcode" />
+                        <td class="barcodecell" colspan="3">
+                            <barcode size="1.5" height="2" code="{$data.waybill_number}" type="C93" class="barcode" />
                             <p style="font-size: 22px;text-align: center;">{$data.waybill_number}</p>
                         </td>
                         <td colspan="2">
