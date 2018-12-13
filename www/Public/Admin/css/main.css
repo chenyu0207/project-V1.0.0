@@ -553,9 +553,9 @@ ul li {
     
 }
 .pdf-bj-tmp-table tr td{
-    border: 2px solid #333;
+    border: 1px solid #333;
     font-size: 22px;
-    padding: .3rem;
+    padding-left: 2px;
 }
 .pdf-bj-tmp-table tr td.td-bold{
     font-weight: bold;
