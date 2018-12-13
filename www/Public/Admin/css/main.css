@@ -548,14 +548,12 @@ ul li {
     border-collapse: collapse;
 }
 .pdf-bj-tmp-table tr{
-    height: 40px;
-    /* line-height: 30px; */
-    
+    height: 35px;
 }
 .pdf-bj-tmp-table tr td{
-    border: 1px solid #333;
-    font-size: 22px;
-    padding-left: 2px;
+    border: 1px solid #666666;
+    font-size: 28px;
+    padding: 8px;
 }
 .pdf-bj-tmp-table tr td.td-bold{
     font-weight: bold;
