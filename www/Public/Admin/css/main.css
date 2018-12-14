@@ -546,6 +546,7 @@ ul li {
 .pdf-bj-tmp-table{
     width: 100%;
     border-collapse: collapse;
+    font-weight: bold;
 }
 .pdf-bj-tmp-table tr{
     height: 35px;
